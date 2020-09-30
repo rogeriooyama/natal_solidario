@@ -46,7 +46,7 @@ main {
     display: block;
 }
 
-.boy {
+.Masculino {
     width:10%;
     height:10%;
     background-image: url(../img/little_boy-50px.png);
@@ -56,7 +56,7 @@ main {
     position: absolute;
 }
 
-.girl {
+.Feminino {
     width:10%;
     height:10%;
     background-image:   url(../img/baby_girl-50px.png);
@@ -66,12 +66,12 @@ main {
     position: absolute;
 }
 
-.boy:hover > .pin-text {
+.Masculino:hover > .pin-text {
     display: block;
     width: 150px;
 }
 
-.girl:hover > .pin-text {
+.Feminino:hover > .pin-text {
     display: block;
     width: 150px;
 }

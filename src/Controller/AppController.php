@@ -62,6 +62,10 @@ class AppController extends Controller
                     'action' => 'login'
                 ]
             ]);
+            $this->Auth->allow([
+                'adotar'
+            ]);
+
 
         /*
          * Enable the following component for recommended CakePHP form protection settings.
