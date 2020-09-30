@@ -58,7 +58,7 @@ main {
     display: block;
 }
 
-.Masculino {
+.Masculino-0 {
     width:10%;
     height:10%;
     background-image: url(../img/little_boy-50px.png);
@@ -68,7 +68,7 @@ main {
     position: absolute;
 }
 
-.Feminino {
+.Feminino-0 {
     width:10%;
     height:10%;
     background-image:   url(../img/baby_girl-50px.png);
@@ -88,7 +88,7 @@ main {
     position: absolute;
 }
 
-.Masculino-2 {
+.Feminino-2 {
     width:10%;
     height:10%;
     background-image:   url(../img/baby_girl-2-50px.png);
@@ -98,12 +98,22 @@ main {
     position: absolute;
 }
 
-.Masculino:hover > .pin-text {
+.Masculino-0:hover > .pin-text {
     display: block;
     width: 150px;
 }
 
-.Feminino:hover > .pin-text {
+.Feminino-0:hover > .pin-text {
+    display: block;
+    width: 150px;
+}
+
+.Masculino-2:hover > .pin-text {
+    display: block;
+    width: 150px;
+}
+
+.Feminino-2:hover > .pin-text {
     display: block;
     width: 150px;
 }

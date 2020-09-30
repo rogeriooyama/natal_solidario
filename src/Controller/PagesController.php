@@ -83,8 +83,110 @@ class PagesController extends AppController
         $this->viewBuilder()->setlayout('bootstrap');
         $this->loadModel('Criancas');
         $criancas = $this->Criancas->find('all')->toArray();
-        //debug(count($criancas));
-        $this->set(compact('criancas'));
+        
+        $fake[0]['nome'] = 'Roberta';
+        $fake[0]['idade'] = '12';
+        $fake[0]['sexo'] = 'Feminino';
+        $fake[0]['status'] = '2';
+
+        $fake[1]['nome'] = 'Pedro';
+        $fake[1]['idade'] = '9';
+        $fake[1]['sexo'] = 'Masculino';
+        $fake[1]['status'] = '2';
+
+        $fake[2]['nome'] = 'Ana';
+        $fake[2]['idade'] = '11';
+        $fake[2]['sexo'] = 'Feminino';
+        $fake[2]['status'] = '2';
+
+        $fake[3]['nome'] = 'Ricardo';
+        $fake[3]['idade'] = '11';
+        $fake[3]['sexo'] = 'Masculino';
+        $fake[3]['status'] = '2';
+
+        $fake[4]['nome'] = 'Paula';
+        $fake[4]['idade'] = '11';
+        $fake[4]['sexo'] = 'Feminino';
+        $fake[4]['status'] = '2';
+
+        $fake[5]['nome'] = 'Paulo';
+        $fake[5]['idade'] = '11';
+        $fake[5]['sexo'] = 'Masculino';
+        $fake[5]['status'] = '2';
+
+        $fake[6]['nome'] = 'Aline';
+        $fake[6]['idade'] = '11';
+        $fake[6]['sexo'] = 'Feminino';
+        $fake[6]['status'] = '2';
+
+        $fake[7]['nome'] = 'Jose';
+        $fake[7]['idade'] = '11';
+        $fake[7]['sexo'] = 'Masculino';
+        $fake[7]['status'] = '2';
+
+        $fake[8]['nome'] = 'Manuela';
+        $fake[8]['idade'] = '11';
+        $fake[8]['sexo'] = 'Feminino';
+        $fake[8]['status'] = '2';
+
+        $fake[9]['nome'] = 'Henrique';
+        $fake[9]['idade'] = '11';
+        $fake[9]['sexo'] = 'Masculino';
+        $fake[9]['status'] = '2';
+
+        $fake[10]['nome'] = 'Júlia';
+        $fake[10]['idade'] = '11';
+        $fake[10]['sexo'] = 'Feminino';
+        $fake[10]['status'] = '2';
+
+        $fake[11]['nome'] = 'Luis';
+        $fake[11]['idade'] = '11';
+        $fake[11]['sexo'] = 'Masculino';
+        $fake[11]['status'] = '2';
+
+        $fake[12]['nome'] = 'Flávia';
+        $fake[12]['idade'] = '11';
+        $fake[12]['sexo'] = 'Feminino';
+        $fake[12]['status'] = '2';
+
+        $fake[13]['nome'] = 'Fernando';
+        $fake[13]['idade'] = '11';
+        $fake[13]['sexo'] = 'Masculino';
+        $fake[13]['status'] = '2';
+
+        $fake[14]['nome'] = 'Alice';
+        $fake[14]['idade'] = '11';
+        $fake[14]['sexo'] = 'Feminino';
+        $fake[14]['status'] = '2';
+
+        $fake[15]['nome'] = 'Lucas';
+        $fake[15]['idade'] = '11';
+        $fake[15]['sexo'] = 'Masculino';
+        $fake[15]['status'] = '2';
+
+        $fake[16]['nome'] = 'Gabriela';
+        $fake[16]['idade'] = '11';
+        $fake[16]['sexo'] = 'Feminino';
+        $fake[16]['status'] = '2';
+
+        $fake[17]['nome'] = 'Eduardo';
+        $fake[17]['idade'] = '11';
+        $fake[17]['sexo'] = 'Masculino';
+        $fake[17]['status'] = '2';
+
+        $fake[18]['nome'] = 'Larissa';
+        $fake[18]['idade'] = '11';
+        $fake[18]['sexo'] = 'Feminino';
+        $fake[18]['status'] = '2';
+
+        $fake[19]['nome'] = 'Otávio';
+        $fake[19]['idade'] = '11';
+        $fake[19]['sexo'] = 'Masculino';
+        $fake[19]['status'] = '2';
+
+        //debug($fake);
+        //die;
+        $this->set(compact('criancas','fake'));
     }
 
     public function adotar($id = null)
@@ -96,6 +198,7 @@ class PagesController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData());
+            $crianca['status'] = 1;
             if ($this->Criancas->save($crianca)) {
                 //$this->Flash->success(__('Obrigado!'));
                 return $this->redirect(['action' => 'index']);
