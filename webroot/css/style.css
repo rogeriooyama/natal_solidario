@@ -32,14 +32,17 @@ main {
 }
 
 .content {
-    padding: 20px 40px 20px 40px;
+    padding: 20px 40px 50px 40px;
     background-color: #ffffff;
     border-radius: 20px;
+    background-image: url('../img/lights.png');
+    background-repeat: repeat-x;
+    background-position: bottom;
 }
 
 .content h1 { 
     font-family: 'Great Vibes', cursive;
-    font-size: 3.2rem;
+    font-size: 3.4rem;
     color: #8a081f;
 }
 
