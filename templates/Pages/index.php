@@ -17,13 +17,13 @@
           <div class="content">
             <div class="row">
               <div class="mr-auto">
-                <h1>Natal Solidário</h1>
+                <p class="title">Natal Solidário</p>
               </div>
               <div class="">
-                <?= $this->Html->image('bells.png', ['class' => 'ml-auto', 'style' => 'height: 60px; vertical-align: super;']) ?>
+                <?= $this->Html->image('flower-bells.png', ['class' => 'ml-auto', 'style' => 'height: 70px; vertical-align: super;']) ?>
               </div>  
             </div>            
-            <div class="row mt-2 mb-2">
+            <div class="row mb-3">
               <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus accumsan tristique. Ut ornare, nisi at dignissim aliquam, justo tortor ultrices metus, a euismod orci lacus eget sem. Suspendisse eu euismod mi. Sed eget vulputate lectus, a rutrum eros. Quisque maximus dignissim purus sed commodo. Cras orci risus, mollis vel augue pulvinar, euismod volutpat velit. Morbi dictum tempus velit, vitae auctor justo congue et. Suspendisse sit amet tincidunt nisl. Donec porttitor, velit at consectetur posuere, dui diam sodales sem, ut tempus magna arcu id erat. Cras lacinia purus a sem interdum semper.
               </p>
