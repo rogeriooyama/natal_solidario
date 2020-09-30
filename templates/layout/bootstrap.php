@@ -12,7 +12,7 @@
     <?= $this->Html->css(['style']) ?>
   </head>
   <body>
-    <nav class="navbar" style="background-color: #F22248; margin-top: 0px; margin-bottom: 0px;">
+    <nav class="navbar" style="">
       <div class="order-last">        
         <?= $this->Html->image('logo-lar-sta-filomena-branco-chapeu.png') ?>
       </div>

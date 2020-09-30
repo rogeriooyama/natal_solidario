@@ -18,6 +18,12 @@ main {
     background-repeat: repeat-x;
 }
 
+.navbar {
+    background-color: #8a081f; 
+    margin-top: 0px; 
+    margin-bottom: 0px;
+}
+
 .navbar-brand {
     font-size: 3rem;
     color: #ffffff;
@@ -33,6 +39,8 @@ main {
 
 .content h1 { 
     font-family: 'Great Vibes', cursive;
+    font-size: 3.2rem;
+    color: #8a081f;
 }
 
 .tree {
@@ -46,7 +54,7 @@ main {
     display: block;
 }
 
-.boy {
+.boy-0 {
     width:10%;
     height:10%;
     background-image: url(../img/little_boy-50px.png);
@@ -56,10 +64,30 @@ main {
     position: absolute;
 }
 
-.girl {
+.girl-0 {
     width:10%;
     height:10%;
     background-image:   url(../img/baby_girl-50px.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+}
+
+.boy-2 {
+    width:10%;
+    height:10%;
+    background-image: url(../img/little_boy-2-50px.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+}
+
+.girl-2 {
+    width:10%;
+    height:10%;
+    background-image:   url(../img/baby_girl-2-50px.png);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -88,6 +116,7 @@ main {
     border:2px solid #ffffff;
     border-radius: 15px;
     padding: 5px;
+    z-index: 999;
 }
 
 .pin-text h3 {
