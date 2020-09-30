@@ -65,6 +65,83 @@
                   <button>Adotar</button>
                 </div>
             </div>
+            <div id="pin-1-10" class="girl">
+                <div class="pin-text">
+                  <h3>Menina</h3>
+                  <p>10 anos</p>
+                  <button>Adotar</button>
+                </div>
+            </div>
+            <div id="pin-1-11" class="boy">
+                <div class="pin-text">
+                  <h3>Menino</h3>
+                  <p>10 anos</p>
+                  <button>Adotar</button>
+                </div>
+            </div>
+            <div id="pin-1-12" class="girl">
+                <div class="pin-text">
+                  <h3>Menina</h3>
+                  <p>10 anos</p>
+                  <button>Adotar</button>
+                </div>
+            </div>
+            <div id="pin-1-13" class="boy">
+                <div class="pin-text">
+                  <h3>Menino</h3>
+                  <p>10 anos</p>
+                  <button>Adotar</button>
+                </div>
+            </div>
+            <div id="pin-1-14" class="girl">
+                <div class="pin-text">
+                  <h3>Menina</h3>
+                  <p>10 anos</p>
+                  <button>Adotar</button>
+                </div>
+            </div>
+            <div id="pin-1-15" class="boy">
+                <div class="pin-text">
+                  <h3>Menino</h3>
+                  <p>10 anos</p>
+                  <button>Adotar</button>
+                </div>
+            </div>
+            <div id="pin-1-16" class="girl">
+                <div class="pin-text">
+                  <h3>Menina</h3>
+                  <p>10 anos</p>
+                  <button>Adotar</button>
+                </div>
+            </div>
+            <div id="pin-1-17" class="boy">
+                <div class="pin-text">
+                  <h3>Menino</h3>
+                  <p>10 anos</p>
+                  <button>Adotar</button>
+                </div>
+            </div>
+            <div id="pin-1-18" class="girl">
+                <div class="pin-text">
+                  <h3>Menina</h3>
+                  <p>10 anos</p>
+                  <button>Adotar</button>
+                </div>
+            </div>
+            <div id="pin-1-19" class="boy">
+                <div class="pin-text">
+                  <h3>Menino</h3>
+                  <p>10 anos</p>
+                  <button>Adotar</button>
+                </div>
+            </div>
+            <div id="pin-1-20" class="girl">
+                <div class="pin-text">
+                  <h3>Menina</h3>
+                  <p>10 anos</p>
+                  <button>Adotar</button>
+                </div>
+            </div>
           </div>
         </div>
         <div class="col-lg-6">
