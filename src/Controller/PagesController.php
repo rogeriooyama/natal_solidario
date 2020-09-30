@@ -81,6 +81,27 @@ class PagesController extends AppController
     public function index()
     {
         $this->viewBuilder()->setlayout('bootstrap');
+        $this->loadModel('Criancas');
+        $criancas = $this->Criancas->find('all')->toArray();
+        //debug(count($criancas));
+        $this->set(compact('criancas'));
+    }
 
+    public function adotar($id = null)
+    {
+        $this->viewBuilder()->setlayout('login_layout');
+        $this->loadModel('Criancas');
+        $crianca = $this->Criancas->get($id, [
+            'contain' => [],
+        ]);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData());
+            if ($this->Criancas->save($crianca)) {
+                //$this->Flash->success(__('Obrigado!'));
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('Ocorreu um erro. Tente novamente.'));
+        }
+        $this->set(compact('crianca'));
     }
 }
