@@ -13,10 +13,14 @@
   </head>
   <body>
     <nav class="navbar" style="background-color: #F22248; margin-top: 0px; margin-bottom: 0px;">
-      <p class="navbar-brand">Natal Solidário</p>
+      <div class="order-last">        
+        <?= $this->Html->image('logo-lar-sta-filomena-branco-chapeu.png') ?>
+      </div>
     </nav>
-    <main role="main" class="container">
+    <main role="main">
+      <div class="container">
         <?= $this->fetch('content') ?>
+      </div>
     </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
