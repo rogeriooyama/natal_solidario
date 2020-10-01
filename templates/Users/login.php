@@ -24,6 +24,7 @@
         </div>
       <?= $this->Form->end() ?>
     <hr/>
+    <?= $this->Html->link('&raquo; Ir para a Página Inicial', ['controller' => 'pages', 'action' => 'index'], ['escape' => false]) ?>
     </div>
     <!-- /.login-card-body -->
   </div>
