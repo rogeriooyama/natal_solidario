@@ -231,7 +231,7 @@ class PagesController extends AppController
 
     public function adotar($id = null)
     {
-        $this->viewBuilder()->setlayout('login_layout');
+        $this->viewBuilder()->setlayout('bootstrap');
         $this->loadModel('Criancas');
         $crianca = $this->Criancas->get($id, [
             'contain' => [],

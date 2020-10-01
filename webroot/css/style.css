@@ -14,7 +14,7 @@ body {
 }        
 
 main {
-    background-image: url(../img/snow.png);
+    /* background-image: url(../img/snow.png); */
     background-repeat: repeat-x;
 }
 
@@ -190,6 +190,13 @@ footer .copyright {
     text-align: center;
     color: #fcc6c6;
     font-size: small;
+}
+
+.formulario {
+    background-color: #ffffff;
+    padding: 50px 30px 50px 30px;
+    margin: 100px 0px 70px 0px;
+    border-radius: 20px;
 }
 
   /* Extra small devices (portrait phones, less than 576px) */

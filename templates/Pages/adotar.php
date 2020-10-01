@@ -5,18 +5,16 @@
  */
 ?>
 <div class="row">
-    <div class="column-responsive column-80">
-        <div class="users form content">
+    <div class="col-lg-6 offset-lg-3">
+        <div class="formulario form-group">
             <?= $this->Form->create($crianca) ?>
-            <fieldset>
                 <legend><?= __('Por favor, insira seu contato:') ?></legend>
                 <?php
-                    echo $this->Form->control('nome_padrinho',['label'=>'Nome']);
-                    echo $this->Form->control('tel_padrinho',['label'=>'Telefone']);
-                    echo $this->Form->control('email_padrinho',['label'=>'E-mail']);
+                    echo $this->Form->control('nome_padrinho',['label'=>'Nome completo', 'class' => 'form-control mb-3']);
+                    echo $this->Form->control('tel_padrinho',['label'=>'Telefone', 'class' => 'form-control mb-3']);
+                    echo $this->Form->control('email_padrinho',['label'=>'E-mail', 'class' => 'form-control mb-3']);
                 ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submeter')) ?>
+            <?= $this->Form->button(__('Enviar informações'), ['class' => 'btn btn-block btn-primary']) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>
