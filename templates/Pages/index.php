@@ -10,7 +10,7 @@
                           <div class="pin-text">
                             <h3>'.$criancas[$i]['nome'].'</h3>
                             <p>'.$criancas[$i]['idade'].' anos</p>'?>
-                            <?= $criancas[$i]['status'] == 0 ? $this->Html->link('Presentear', ['action' => 'adotar', $criancas[$i]['id']], ['class' => 'btn btn-info btn-sm', 'target' => '_blank']) : "Presenteado"; ?>
+                            <?= $criancas[$i]['status'] == 0 ? $this->Html->link('Presentear', ['action' => 'adotar', $criancas[$i]['id']], ['class' => 'btn btn-info btn-sm']) : "Presenteado"; ?>
                           <?php echo '</div></div>'; 
             } ?>
           </div>
