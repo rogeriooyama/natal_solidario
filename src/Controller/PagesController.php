@@ -186,6 +186,46 @@ class PagesController extends AppController
 
         //debug($fake);
         //die;
+        shuffle($fake);
+        shuffle($criancas);
+        //Verifica se existe ao menos 20 crianças, preenche o resto com fakes
+        if(count($criancas) < 20) {
+            for($i=0;$i<20;$i++) {
+                if(!isset($criancas[$i])) {
+                    $criancas[$i] = $fake[$i];
+                }
+            }
+        }
+        else {
+            //Verifica o número de crianças já presenteadas e armazena o índice dessas crianças
+            for($i=0,$j=0,$k=0;$i<count($criancas);$i++) {
+                if($criancas[$i]['status'] == 2) {
+                  $presenteadas[$j] = $i;
+                  $j++;
+                }
+                //Verifica o número de crianças não presenteadas e armazena o índice dessas crianças
+                else if($criancas[$i]['status'] == 0) {
+                  $npresenteadas[$k] = $i;
+                  $k++;
+                }
+            }
+            //Preenche array auxiliar com 15 posições ou até número de crianças não presenteadas (o que for menor)
+            for($i=0,$cont=0;$cont<min($k,15);$cont++) {
+                $ind = $npresenteadas[$cont];
+                $aux[$cont] = $criancas[$ind];
+            }
+            //Preenche o resto das posições do array com crianças já presenteadas ou fake, se necessário
+            for($i=0;$cont<20;$cont++,$i++) {
+                if(!isset($presenteadas[$i]))
+                    $aux[$cont] = $fake[$cont];
+                else {
+                    $ind = $presenteadas[$i];
+                    $aux[$cont] = $criancas[$ind];
+                }
+            }
+            shuffle($aux);
+            $criancas = $aux;
+        }
         $this->set(compact('criancas','fake'));
     }
 
