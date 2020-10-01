@@ -4,31 +4,6 @@
           <div class="tree">
             <?= $this->Html->image('christmas_tree.png') ?>
             <?php            
-                  $presenteadas = 0;
-                  //Verifica se existe ao menos 20 crianças, preenche o resto com fakes
-                  for($i=0;$i<20;$i++) {
-                    if($criancas[$i] == null) {
-                      $criancas[$i] = $fake[$i];
-                    }
-                  }
-                  //Verifica o número de crianças já presenteadas e armazena o índice das crianças não presenteadas
-                  for($i=0,$k=0;$i<count($criancas);$i++) {
-                    if($criancas[$i]['status'] == 2) {
-                      $presenteadas++;
-                    }
-                    else if($criancas[$i]['status'] == 0) {
-                      $npresenteadas[$k] = $i;
-                      $k++;
-                    }
-                  }
-                  //Exibir pelo menos 5 crianças presenteadas
-                  if($presenteadas < 5) {
-                    for($i=0;$i<5-$presenteadas;$i++) {
-                      $ind = $npresenteadas[$i];
-                      $criancas[$ind] = $fake[$ind];
-                    }
-                  }
-                  shuffle($criancas);
                   for($i=0;$i<20;$i++) {
                     $cod=$i+1;
                     echo '<div id="pin-1-'.$cod.'" class="'.$criancas[$i]['sexo'].'-'.$criancas[$i]['status'].'">
