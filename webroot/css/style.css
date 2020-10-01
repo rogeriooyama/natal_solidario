@@ -32,10 +32,10 @@ main {
 }
 
 .content {
-    padding: 20px 40px 50px 40px;
+    padding: 20px 40px 60px 40px;
     background-color: #ffffff;
     border-radius: 20px;
-    background-image: url('../img/lights.png');
+    background-image: url('../img/christmas_frame-1.png');
     background-repeat: repeat-x;
     background-position: bottom;
 }
@@ -179,9 +179,10 @@ main {
 #pin-1-20 { top:35%; left:20%; }
 
 footer {
-    /* background-color: #394c5c; */
+    background-color: #8a081f;
     background-image: linear-gradient(#c74059, #8a081f);
-    padding: 50px 20px 1px 20px;
+    background-repeat: repeat-x;
+    padding: 60px 20px 1px 20px;
     margin-top: 30px;
 }
 
