@@ -178,17 +178,46 @@ main {
 #pin-1-19 { top:75%; left:50%; }
 #pin-1-20 { top:35%; left:20%; }
 
+footer {
+    /* background-color: #394c5c; */
+    background-image: linear-gradient(#c74059, #8a081f);
+    padding: 50px 20px 1px 20px;
+    margin-top: 30px;
+}
+
+footer .copyright {
+    text-align: center;
+    color: #fcc6c6;
+    font-size: small;
+}
+
   /* Extra small devices (portrait phones, less than 576px) */
-  @media (max-width: 575.98px) {  }
+  @media (max-width: 575.98px) {  
+    .content .title { 
+        font-size: 2.8rem;
+    }
+  }
   
   /* Small devices (landscape phones, 576px and up) */
-  @media (min-width: 576px) and (max-width: 767.98px) {  }
+  @media (min-width: 576px) and (max-width: 767.98px) {  
+    .content .title { 
+        font-size: 2.8rem;
+    }
+  }
   
   /* Medium devices (tablets, 768px and up) */
-  @media (min-width: 768px) and (max-width: 991.98px) {  }
+  @media (min-width: 768px) and (max-width: 991.98px) {  
+    .content .title { 
+        font-size: 3.6rem;
+    }
+  }
   
   /* Large devices (desktops, 992px and up) */
-  @media (min-width: 992px) and (max-width: 1199.98px) {  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {  
+      .content .title { 
+        font-size: 2.8rem;
+    }
+  }
   
   /* Extra large devices (large desktops, 1200px and up) */
   @media (min-width: 1200px) {  }

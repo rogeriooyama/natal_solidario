@@ -1,9 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Campanha de arrecadação de presentes de natal para as crianças do Lar Santa Filomena de Presidente Prudente">
+    <meta name="keywords" content="Lar Santa Filomena, Presidente Prudente, Campanha de Natal">
+    <meta name="author" content="Fundação Inova Prudente">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -12,8 +15,8 @@
     <?= $this->Html->css(['style']) ?>
   </head>
   <body>
-    <nav class="navbar" style="">
-      <div class="order-last">        
+    <nav class="navbar">
+      <div>        
         <?= $this->Html->image('logo-lar-sta-filomena-branco-chapeu.png') ?>
       </div>
     </nav>
@@ -22,6 +25,11 @@
         <?= $this->fetch('content') ?>
       </div>
     </main>
+    <footer>
+      <div class="copyright">
+        <p>Desenvolvido por: Fundação Inova Prudente</p>
+      </div>     
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
