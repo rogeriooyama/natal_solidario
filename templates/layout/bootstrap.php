@@ -32,6 +32,7 @@
     </main>
     <footer>
       <div class="copyright">
+        <a href="https://www.inovaprudente.com.br/"><?= $this->Html->image('Logo_Inova_Prudente.png', ['style' => 'width:10%;height:10%;']) ?></a>
         <p>Desenvolvido por: Fundação Inova Prudente</p>
       </div>     
     </footer>
