@@ -237,13 +237,26 @@ class PagesController extends AppController
             'contain' => [],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData());
-            $crianca['status'] = 1;
-            if ($this->Criancas->save($crianca)) {
-                //$this->Flash->success(__('Obrigado!'));
-                return $this->redirect(['action' => 'index']);
+            if (isset($_POST['g-recaptcha-response'])) {
+                $captcha_data = $_POST['g-recaptcha-response'];
             }
-            $this->Flash->error(__('Ocorreu um erro. Tente novamente.'));
+            
+            // Se nenhum valor foi recebido, o usuário não realizou o captcha
+            if (!$captcha_data) {
+                $this->Flash->error_sm(__('Por favor, confirme o captcha.'));
+            }
+            else {
+                $resposta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdU69IZAAAAAAjIyvHiucXYDpD_llhPv_54RS7Y&response=".$captcha_data."&remoteip=".$_SERVER['REMOTE_ADDR']);
+            }
+            if ($resposta != null && $resposta.success) {
+                $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData());
+                $crianca['status'] = 1;
+                if ($this->Criancas->save($crianca)) {
+                    //$this->Flash->success(__('Obrigado!'));
+                    return $this->redirect(['action' => 'index']);
+                }
+                $this->Flash->error(__('Ocorreu um erro. Tente novamente.'));
+            }
         }
         $this->set(compact('crianca'));
     }
