@@ -35,7 +35,7 @@ class PagesController extends AppController
     public function initialize(): void
     {
         parent::initialize();
-        $this->Auth->allow(['index']);
+        $this->Auth->allow(['index', 'adotar', 'confirmacao']);
     }
 
     /**
@@ -239,12 +239,18 @@ class PagesController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData());
             $crianca['status'] = 1;
+            $crianca['email_padrinho'] = strtolower($this->request->getData('email_padrinho'));
             if ($this->Criancas->save($crianca)) {
                 //$this->Flash->success(__('Obrigado!'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'confirmacao']);
             }
             $this->Flash->error(__('Ocorreu um erro. Tente novamente.'));
         }
         $this->set(compact('crianca'));
+    }
+
+    public function confirmacao()
+    {
+        $this->viewBuilder()->setlayout('bootstrap');
     }
 }
