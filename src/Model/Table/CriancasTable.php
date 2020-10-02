@@ -78,6 +78,24 @@ class CriancasTable extends Table
             ->requirePresence('idade', 'create')
             ->notEmptyString('idade');
 
+        $validator
+            ->scalar('nome_padrinho')
+            ->maxLength('nome_padrinho', 100)
+            ->requirePresence('nome_padrinho', 'create')
+            ->notEmptyString('nome_padrinho', 'Por favor, informe seu nome completo');
+
+        $validator
+            ->scalar('tel_padrinho')
+            ->maxLength('tel_padrinho', 50)
+            ->requirePresence('tel_padrinho', 'create')
+            ->notEmptyString('tel_padrinho', 'Por favor, informe seu telefone para contato');
+
+        $validator
+            ->scalar('email_padrinho')
+            ->maxLength('email_padrinho', 100)
+            ->requirePresence('email_padrinho', 'create')
+            ->notEmptyString('email_padrinho', 'Por favor, informe seu email para contato');
+
         return $validator;
     }
 }
