@@ -15,7 +15,7 @@
                     echo $this->Form->control('tel_padrinho',['label'=>'Telefone', 'class' => 'form-control mb-3']);
                     echo $this->Form->control('email_padrinho',['label'=>'E-mail', 'class' => 'form-control mb-3']);
                 ?>
-            <div class="g-recaptcha" data-sitekey="6LdU69IZAAAAAIdevzmcXwNbrb0ZdMnBp9uJ3BH3"></div>    
+            <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>    
             <?= $this->Form->button(__('Enviar informações'), ['class' => 'btn btn-block btn-primary']) ?>
             <?= $this->Form->end() ?>
         </div>
