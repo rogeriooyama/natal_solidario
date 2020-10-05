@@ -34,7 +34,7 @@
                   <div class="painel-1">
                     <span class="legenda">Presenteadas</span>
                     <br/>
-                    <span class="numeros"><?= $presenteadas ?></span>  
+                    <span class="numeros"><?= $numpresenteadas ?></span>  
                   </div> 
               </div>
               <div class="col-4">

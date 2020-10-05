@@ -85,7 +85,7 @@ class PagesController extends AppController
         $criancas = $this->Criancas->find('all')->toArray();
         $totalcriancas = count($criancas);
         $aguardando = count($this->Criancas->find('all',['conditions' => ['status =' => '0']])->toArray());
-        $presenteadas = count($this->Criancas->find('all',['conditions' => ['status !=' => '0']])->toArray());
+        $numpresenteadas = count($this->Criancas->find('all',['conditions' => ['status !=' => '0']])->toArray());
         $numfake = 0;
         
         $fake[0]['nome'] = 'Roberta';
@@ -232,8 +232,8 @@ class PagesController extends AppController
             $criancas = $aux;
         }
         $totalcriancas += $numfake;
-        $presenteadas += $numfake;
-        $this->set(compact('criancas','fake','totalcriancas','aguardando','presenteadas'));
+        $numpresenteadas += $numfake;
+        $this->set(compact('criancas','fake','totalcriancas','aguardando','numpresenteadas'));
     }
     
     public function adotar($id = null)
