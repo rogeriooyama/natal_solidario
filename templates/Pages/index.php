@@ -14,6 +14,9 @@
                           <?php echo '</div></div>'; 
             } ?>
           </div>
+          <div class="mb-5">
+            <?= $this->Html->image('contador.png',['class' => 'img-fluid']) ?>
+          </div>
         </div>
         <div class="col-lg-6 align-self-center">
           <div class="content">
