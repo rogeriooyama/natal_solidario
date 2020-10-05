@@ -27,21 +27,21 @@
                 <div style="background-color: #8a081f; padding: 15px; color: #ffffff; text-align: center; font-weight: bold;">
                 <span class="legenda">Aguardando</span>
                   <br/>
-                  <span class="numeros">115</span>
+                  <span class="numeros"><?= $aguardando ?></span>
                 </div>
               </div>
               <div class="col-4">
                 <div style="background-color: #8a081f; padding: 15px; color: #ffffff; text-align: center; font-weight: bold;">
                 <span class="legenda">Presenteadas</span>
                   <br/>
-                  <span class="numeros">27</span>
+                  <span class="numeros"><?= $presenteadas ?></span>
                 </div>
               </div>
               <div class="col-4">
                 <div style="background-color: #8a081f; padding: 15px 15px 15px 15px; color: #ffffff; text-align: center; font-weight: bold;">
                 <span class="legenda">Total</span>
                   <br/>
-                  <span class="numeros">43</span>
+                  <span class="numeros"><?= $totalcriancas ?></span>
                 </div>
               </div>
             </div>

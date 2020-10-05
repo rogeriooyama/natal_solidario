@@ -83,6 +83,10 @@ class PagesController extends AppController
         $this->viewBuilder()->setlayout('bootstrap');
         $this->loadModel('Criancas');
         $criancas = $this->Criancas->find('all')->toArray();
+        $totalcriancas = count($criancas);
+        $aguardando = count($this->Criancas->find('all',['conditions' => ['status =' => '0']])->toArray());
+        $presenteadas = count($this->Criancas->find('all',['conditions' => ['status !=' => '0']])->toArray());
+        $numfake = 0;
         
         $fake[0]['nome'] = 'Roberta';
         $fake[0]['idade'] = '12';
@@ -193,6 +197,7 @@ class PagesController extends AppController
             for($i=0;$i<20;$i++) {
                 if(!isset($criancas[$i])) {
                     $criancas[$i] = $fake[$i];
+                    $numfake++;
                 }
             }
         }
@@ -216,8 +221,10 @@ class PagesController extends AppController
             }
             //Preenche o resto das posições do array com crianças já presenteadas ou fake, se necessário
             for($i=0;$cont<20;$cont++,$i++) {
-                if(!isset($presenteadas[$i]))
+                if(!isset($presenteadas[$i])) {
                     $aux[$cont] = $fake[$cont];
+                    $numfake++;
+                }
                 else {
                     $ind = $presenteadas[$i];
                     $aux[$cont] = $criancas[$ind];
@@ -226,9 +233,11 @@ class PagesController extends AppController
             shuffle($aux);
             $criancas = $aux;
         }
-        $this->set(compact('criancas','fake'));
+        $totalcriancas += $numfake;
+        $presenteadas += $numfake;
+        $this->set(compact('criancas','fake','totalcriancas','aguardando','presenteadas'));
     }
-
+    
     public function adotar($id = null)
     {
         $this->viewBuilder()->setlayout('bootstrap');
