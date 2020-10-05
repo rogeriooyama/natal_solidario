@@ -82,19 +82,25 @@ class CriancasTable extends Table
             ->scalar('nome_padrinho')
             ->maxLength('nome_padrinho', 100)
             ->requirePresence('nome_padrinho', 'create')
-            ->notEmptyString('nome_padrinho', 'Por favor, informe seu nome completo');
+            ->notEmpty('nome_padrinho', 'Por favor, informe seu nome completo', function ($context) {
+                return isset($context['data']['required']);
+            });
 
         $validator
             ->scalar('tel_padrinho')
             ->maxLength('tel_padrinho', 50)
             ->requirePresence('tel_padrinho', 'create')
-            ->notEmptyString('tel_padrinho', 'Por favor, informe seu telefone para contato');
+            ->notEmptyString('tel_padrinho', 'Por favor, informe seu telefone para contato', function ($context) {
+                return isset($context['data']['required']);
+            });
 
         $validator
             ->scalar('email_padrinho')
             ->maxLength('email_padrinho', 100)
             ->requirePresence('email_padrinho', 'create')
-            ->notEmptyString('email_padrinho', 'Por favor, informe seu email para contato');
+            ->notEmptyString('email_padrinho', 'Por favor, informe seu email para contato', function ($context) {
+                return isset($context['data']['required']);
+            });
 
         return $validator;
     }

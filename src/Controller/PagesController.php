@@ -241,18 +241,20 @@ class PagesController extends AppController
             
             // Se nenhum valor foi recebido, o usuário não realizou o captcha
             if (!$captcha_data) {
-                $this->Flash->error_sm(__('Por favor, confirme o captcha.'));
+                $this->Flash->error(__('Por favor, confirme o captcha.'));
+                return $this->redirect(['action' => 'adotar', $id]);
             }
             else {
                 $resposta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe&response=".$captcha_data."&remoteip=".$_SERVER['REMOTE_ADDR']);
             }
-            if ($resposta != null && $resposta.success) {
+            // debug($resposta);exit;
+            if ($resposta.success) {
                 $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData());
                 $crianca['status'] = 1;
                 $crianca['email_padrinho'] = strtolower($this->request->getData('email_padrinho'));
                 if ($this->Criancas->save($crianca)) {
                     //$this->Flash->success(__('Obrigado!'));
-                    return $this->redirect(['action' => 'index']);
+                    return $this->redirect(['action' => 'confirmacao']);
                 }
                 $this->Flash->error(__('Ocorreu um erro. Tente novamente.'));
             }

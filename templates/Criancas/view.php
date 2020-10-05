@@ -47,7 +47,24 @@
                 </tr>
                 <tr>
                     <th><?= __('Status') ?></th>
-                    <td><?= $this->Number->format($crianca->status) ?></td>
+                    <td>
+                        <?php
+                            switch ($crianca->status) {
+                                case '0':
+                                    echo '>Disponível';
+                                    break;
+                                
+                                case '1':
+                                    echo 'Aguardando contato';
+                                    break;
+
+                                case '2':
+                                    echo 'Confirmado';
+                                    break;
+                            }
+                            $crianca->status 
+                        ?>
+                    </td>
                 </tr>
             </table>
             <div class="text">

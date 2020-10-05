@@ -8,6 +8,11 @@
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Ações') ?></h4>
+            <?= $this->Form->postLink(
+                __('Excluir'),
+                ['action' => 'delete', $crianca->id],
+                ['confirm' => __('Deseja realmente excluir?'), 'class' => 'side-nav-item']
+            ) ?>
             <?= $this->Html->link(__('Listar Crianças'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
@@ -17,20 +22,16 @@
             <fieldset>
                 <legend><?= __('Cadastrar Criança') ?></legend>
                 <?php
-                    echo $this->Form->control('nome');
-                    echo $this->Form->control('sobrenome');
+                    echo $this->Form->control('nome', ['label' => 'Nome']);
+                    echo $this->Form->control('sobrenome', ['label' => 'Sobrenome']);
                     echo $this->Form->control('sexo', [
                         'label' => 'Sexo', 
                         'type' => 'select',
                         'options' => [''=>'', 'Masculino' => 'Masculino', 'Feminino' => 'Feminino'],
                         'class' => 'form-control mb-2'
                         ]);
-                    echo $this->Form->control('idade');
-                    echo $this->Form->control('observacoes');
-                    echo $this->Form->control('nome_padrinho');
-                    echo $this->Form->control('tel_padrinho');
-                    echo $this->Form->control('email_padrinho');
-                    echo $this->Form->control('status');
+                    echo $this->Form->control('idade', ['label' => 'Idade']);
+                    echo $this->Form->control('observacoes', ['label' => 'Observações']);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submeter')) ?>

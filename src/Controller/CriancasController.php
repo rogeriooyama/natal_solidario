@@ -18,6 +18,7 @@ class CriancasController extends AppController
      */
     public function index()
     {
+        $this->paginate = ['order' => ['status' => 'desc', 'nome' => 'asc']];
         $criancas = $this->paginate($this->Criancas);
 
         $this->set(compact('criancas'));
@@ -74,7 +75,7 @@ class CriancasController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData());
             if ($this->Criancas->save($crianca)) {
-                $this->Flash->success(__('A criança foi cadastrada.'));
+                $this->Flash->success(__('A criança foi alterada.'));
 
                 return $this->redirect(['action' => 'index']);
             }
