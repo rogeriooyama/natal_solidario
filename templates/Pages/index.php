@@ -18,7 +18,7 @@
           </div>          
           <div class="container mb-5">
             <div class="row mb-3">
-              <div class="col-6 offset-3">
+              <div class="col-6 offset-3 logo-arvore">
                 <?= $this->Html->image('Logo_Inova_Prudente-1.png', ['class' => 'img-fluid']) ?>
               </div>
             </div>

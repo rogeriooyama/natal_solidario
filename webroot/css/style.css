@@ -178,6 +178,10 @@ main {
 #pin-1-19 { top:75%; left:50%; }
 #pin-1-20 { top:35%; left:20%; }
 
+.logo-arvore {
+    padding: 0px 40px 0px 40px
+}
+
 .legenda {
     font-size: 0.8rem;
 }
