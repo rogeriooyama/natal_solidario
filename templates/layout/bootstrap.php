@@ -32,7 +32,11 @@
     </main>
     <footer>
       <div class="copyright">
-        <a href="https://www.inovaprudente.com.br/"><?= $this->Html->image('Logo_Inova_Prudente.png', ['style' => 'width:10%;height:10%;']) ?></a>
+        <div class="row">
+          <div class="col-8 offset-2">
+            <a href="https://www.inovaprudente.com.br/"><?= $this->Html->image('Logo_Inova_Prudente-footer.png', ['class' => 'img-fluid']) ?></a>
+          </div>
+        </div>       
         <p>Desenvolvido por: Fundação Inova Prudente</p>
       </div>     
     </footer>
