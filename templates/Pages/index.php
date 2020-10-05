@@ -22,27 +22,27 @@
                 <?= $this->Html->image('Logo_Inova_Prudente-1.png', ['class' => 'img-fluid']) ?>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col-4">
-                <div style="background-color: #8a081f; padding: 15px; color: #ffffff; text-align: center; font-weight: bold;">
-                <span class="legenda">Aguardando</span>
-                  <br/>
-                  <span class="numeros"><?= $aguardando ?></span>
-                </div>
+                  <div class="painel">
+                    <span class="legenda">Aguardando</span>
+                    <br/>
+                    <span class="numeros"><?= $aguardando ?></span>  
+                  </div> 
               </div>
               <div class="col-4">
-                <div style="background-color: #8a081f; padding: 15px; color: #ffffff; text-align: center; font-weight: bold;">
-                <span class="legenda">Presenteadas</span>
-                  <br/>
-                  <span class="numeros"><?= $presenteadas ?></span>
-                </div>
+                  <div class="painel-1">
+                    <span class="legenda">Presenteadas</span>
+                    <br/>
+                    <span class="numeros"><?= $presenteadas ?></span>  
+                  </div> 
               </div>
               <div class="col-4">
-                <div style="background-color: #8a081f; padding: 15px 15px 15px 15px; color: #ffffff; text-align: center; font-weight: bold;">
-                <span class="legenda">Total</span>
-                  <br/>
-                  <span class="numeros"><?= $totalcriancas ?></span>
-                </div>
+                  <div class="painel">
+                    <span class="legenda">Total</span>
+                    <br/>
+                    <span class="numeros"><?= $totalcriancas ?></span>
+                  </div> 
               </div>
             </div>
           </div>

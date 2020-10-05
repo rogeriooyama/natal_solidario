@@ -188,6 +188,25 @@ main {
 
 .numeros {
     font-size: 2.4rem;
+    color: #39a9ad;
+    margin: 0%;
+    padding: 0%;
+}
+
+.painel {
+    padding-top: 5px;
+    background-color: #ebc90d;     
+    color: #4d4b3a; 
+    text-align: center; 
+    font-weight: bold;
+}
+
+.painel-1 {
+    padding-top: 5px;
+    background-color: #f5e069;     
+    color: #4d4b3a; 
+    text-align: center; 
+    font-weight: bold;
 }
 
 footer {
