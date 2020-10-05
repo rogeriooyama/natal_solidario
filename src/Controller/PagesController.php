@@ -188,8 +188,6 @@ class PagesController extends AppController
         $fake[19]['sexo'] = 'Masculino';
         $fake[19]['status'] = '2';
 
-        //debug($fake);
-        //die;
         shuffle($fake);
         shuffle($criancas);
         //Verifica se existe ao menos 20 crianças, preenche o resto com fakes
@@ -204,7 +202,7 @@ class PagesController extends AppController
         else {
             //Verifica o número de crianças já presenteadas e armazena o índice dessas crianças
             for($i=0,$j=0,$k=0;$i<count($criancas);$i++) {
-                if($criancas[$i]['status'] == 2) {
+                if($criancas[$i]['status'] != 0) {
                   $presenteadas[$j] = $i;
                   $j++;
                 }
