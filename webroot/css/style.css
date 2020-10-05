@@ -48,7 +48,7 @@ main {
 }
 
 .tree {
-    margin:40px;
+    margin:40px 40px 0px 40px;
     position: relative;
     display: inline-block;
 }
@@ -178,6 +178,14 @@ main {
 #pin-1-19 { top:75%; left:50%; }
 #pin-1-20 { top:35%; left:20%; }
 
+.legenda {
+    font-size: 0.8rem;
+}
+
+.numeros {
+    font-size: 2.4rem;
+}
+
 footer {
     background-color: #8a081f;
     background-image: linear-gradient(#c74059, #8a081f);
@@ -204,6 +212,13 @@ footer .copyright {
     .content .title { 
         font-size: 2.8rem;
     }
+    .legenda {
+        font-size: 0.8rem;
+    }
+    
+    .numeros {
+        font-size: 2.4rem;
+    }
   }
   
   /* Small devices (landscape phones, 576px and up) */
@@ -211,12 +226,26 @@ footer .copyright {
     .content .title { 
         font-size: 2.8rem;
     }
+    .legenda {
+        font-size: 0.8rem;
+    }
+    
+    .numeros {
+        font-size: 2.4rem;
+    }
   }
   
   /* Medium devices (tablets, 768px and up) */
   @media (min-width: 768px) and (max-width: 991.98px) {  
     .content .title { 
         font-size: 3.6rem;
+    }
+    .legenda {
+        font-size: 1.2rem;
+    }
+    
+    .numeros {
+        font-size: 2.4rem;
     }
   }
   
@@ -228,4 +257,11 @@ footer .copyright {
   }
   
   /* Extra large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) {  }
+  @media (min-width: 1200px) { 
+    .legenda {
+        font-size: 1.0rem;
+    }
+    
+    .numeros {
+        font-size: 2.4rem;
+    } }

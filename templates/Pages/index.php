@@ -1,21 +1,50 @@
       <div class="row"></div>
       <div class="row">
         <div class="col-lg-6">
-          <div class="tree">
-            <?= $this->Html->image('christmas_tree.png') ?>
-            <?php            
-                  for($i=0;$i<20;$i++) {
-                    $cod=$i+1;
-                    echo '<div id="pin-1-'.$cod.'" class="'.$criancas[$i]['sexo'].'-'.$criancas[$i]['status'].'">
-                          <div class="pin-text">
-                            <h3>'.$criancas[$i]['nome'].'</h3>
-                            <p>'.$criancas[$i]['idade'].' anos</p>'?>
-                            <?= $criancas[$i]['status'] == 0 ? $this->Html->link('Presentear', ['action' => 'adotar', $criancas[$i]['id']], ['class' => 'btn btn-info btn-sm']) : "Presenteado"; ?>
-                          <?php echo '</div></div>'; 
-            } ?>
-          </div>
-          <div class="mb-5">
-            <?= $this->Html->image('contador.png',['class' => 'img-fluid']) ?>
+          <div>
+            <div class="tree">
+              <?= $this->Html->image('christmas_tree.png') ?>
+              <?php            
+                    for($i=0;$i<20;$i++) {
+                      $cod=$i+1;
+                      echo '<div id="pin-1-'.$cod.'" class="'.$criancas[$i]['sexo'].'-'.$criancas[$i]['status'].'">
+                            <div class="pin-text">
+                              <h3>'.$criancas[$i]['nome'].'</h3>
+                              <p>'.$criancas[$i]['idade'].' anos</p>'?>
+                              <?= $criancas[$i]['status'] == 0 ? $this->Html->link('Presentear', ['action' => 'adotar', $criancas[$i]['id']], ['class' => 'btn btn-info btn-sm']) : "Presenteado"; ?>
+                            <?php echo '</div></div>'; 
+              } ?>
+            </div>
+          </div>          
+          <div class="container mb-5">
+            <div class="row mb-3">
+              <div class="col-6 offset-3">
+                <?= $this->Html->image('Logo_Inova_Prudente-1.png', ['class' => 'img-fluid']) ?>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div style="background-color: #8a081f; padding: 15px; color: #ffffff; text-align: center; font-weight: bold;">
+                <span class="legenda">Aguardando</span>
+                  <br/>
+                  <span class="numeros">115</span>
+                </div>
+              </div>
+              <div class="col-4">
+                <div style="background-color: #8a081f; padding: 15px; color: #ffffff; text-align: center; font-weight: bold;">
+                <span class="legenda">Presenteadas</span>
+                  <br/>
+                  <span class="numeros">27</span>
+                </div>
+              </div>
+              <div class="col-4">
+                <div style="background-color: #8a081f; padding: 15px 15px 15px 15px; color: #ffffff; text-align: center; font-weight: bold;">
+                <span class="legenda">Total</span>
+                  <br/>
+                  <span class="numeros">43</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-lg-6 align-self-center">
