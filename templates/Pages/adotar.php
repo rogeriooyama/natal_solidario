@@ -10,7 +10,7 @@
         <div class="formulario form-group">
             <?= $this->Flash->render() ?>
             <?= $this->Form->create($crianca) ?>
-                <p class="lead">
+                <p class="title">
                     Olá!
                 </p>
                 <p>
