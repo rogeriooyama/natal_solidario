@@ -241,6 +241,9 @@ class PagesController extends AppController
         $this->viewBuilder()->setlayout('bootstrap');
         $this->loadModel('Criancas');
         $crianca = $this->Criancas->get($id);
+        if($crianca['status'] != 0) {
+            return $this->redirect(['controller' => 'Pages', 'action' => 'index']);
+        }
         if ($this->request->is(['patch', 'post', 'put'])) {
             if (isset($_POST['g-recaptcha-response'])) {
                 $captcha_data = $_POST['g-recaptcha-response'];
