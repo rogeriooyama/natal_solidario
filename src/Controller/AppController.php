@@ -54,7 +54,7 @@ class AppController extends Controller
                     ]
                 ],
                 'loginRedirect' => [
-                    'controller' => 'Users',
+                    'controller' => 'Criancas',
                     'action' => 'index'
                 ],
                 'logoutRedirect' => [
