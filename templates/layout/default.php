@@ -40,7 +40,8 @@ $cakeDescription = 'Árvore Natalina';
         <div class="top-nav-title">
             <?= $this->Html->image('logo-lar-sta-filomena.png', ['class' => 'img-fluid', 'alt' => 'Lar Santa Filomena Logo']) ?>
         </div>
-        <div class="top-nav-links">
+        <div class="top-nav-links">        
+            <?= $this->Html->link(__('Ir para o site'), ['controller' => 'pages', 'action' => 'index'], ['target' => '_blank']) ?>
             <?= $this->Html->link(__('Administradores'), ['controller' => 'users', 'action' => 'index']) ?>
             <?= $this->Html->link(__('Crianças'), ['controller' => 'criancas', 'action' => 'index']) ?>
             <?= $this->Html->link(__('Sair'), ['controller' => 'users', 'action' => 'logout']) ?>
