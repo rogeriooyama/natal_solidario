@@ -56,7 +56,7 @@ class CriancasTable extends Table
 
         $validator
             ->scalar('nome')
-            ->maxLength('nome', 50)
+            ->maxLength('nome', 13, 'O primeiro nome da criança deverá ter 13 letras no máximo')
             ->requirePresence('nome', 'create')
             ->notEmptyString('nome');
 
