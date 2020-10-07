@@ -231,8 +231,8 @@ class PagesController extends AppController
             shuffle($aux);
             $criancas = $aux;
         }
-        $totalcriancas += $numfake;
-        $numpresenteadas += $numfake;
+        $totalcriancas += 5;
+        $numpresenteadas += 5;
         $this->set(compact('criancas','fake','totalcriancas','aguardando','numpresenteadas'));
     }
     
