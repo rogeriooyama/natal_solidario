@@ -14,7 +14,7 @@
                     Olá!
                 </p>
                 <p>
-                Você escolheu presentear <?= ($crianca->sexo == 'Masculino') ? 'o' : 'a'; ?> <?= $crianca->nome . ' ' . $crianca->sobrenome ?> de  <?= $crianca->idade . ' anos.'  ?>
+                    Você escolheu presentear <?= ($crianca->sexo == 'Masculino') ? 'o' : 'a'; ?> <?= $crianca->nome . ' ' . $crianca->sobrenome ?> de  <?= $crianca->idade . ' anos.'  ?>
                 </p>
                 <p>
                     Por favor preencha seus dados para que possamos entrar em contato e combinar com você a melhor forma de fazer isso acontecer.

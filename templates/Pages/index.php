@@ -5,15 +5,22 @@
             <div class="tree">
               <?= $this->Html->image('christmas_tree.png') ?>
               <?php            
-                    for($i=0;$i<20;$i++) {
-                      $cod=$i+1;
-                      echo '<div id="pin-1-'.$cod.'" class="'.$criancas[$i]['sexo'].'-'.$criancas[$i]['status'].'">
-                            <div class="pin-text">
-                              <h3>'.$criancas[$i]['nome'].'</h3>
-                              <p>'.$criancas[$i]['idade'].' anos</p>'?>
-                              <?= $criancas[$i]['status'] == 0 ? $this->Html->link('Presentear', ['action' => 'adotar', $criancas[$i]['id']], ['class' => 'btn btn-info btn-sm']) : "Presenteado"; ?>
-                            <?php echo '</div></div>'; 
-              } ?>
+                for($i=0;$i<20;$i++) :
+                  $cod=$i+1; ?>
+                  <div id="pin-1-<?= $cod ?>" class="<?= $criancas[$i]['sexo'] ?>-<?= $criancas[$i]['status'] ?>">
+                    <div class="pin-text">
+                      <h3><?= $criancas[$i]['nome'] ?></h3>
+                      <p><?= $criancas[$i]['idade']?> anos</p>                                
+                      <?php if ($criancas[$i]['status'] == 0) : ?>
+                        <button id="<?= $criancas[$i]['id'] ?>" title="Cartinha de <?= $criancas[$i]['nome'] ?> - <?= $criancas[$i]['idade'] ?> anos" type="button" class="btn btn-info btn-sm open-modal" data-toggle="modal" data-target="#criancaModal">
+                          Ver cartinha
+                        </button>
+                      <?php else : ?>
+                          Presenteado
+                      <?php endif; ?>
+                    </div>
+                  </div>
+                <?php endfor; ?>
             </div>
           </div>          
           <div class="container mb-5">
@@ -62,9 +69,30 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus accumsan tristique. Ut ornare, nisi at dignissim aliquam, justo tortor ultrices metus, a euismod orci lacus eget sem. Suspendisse eu euismod mi. Sed eget vulputate lectus, a rutrum eros. Quisque maximus dignissim purus sed commodo. Cras orci risus, mollis vel augue pulvinar, euismod volutpat velit. Morbi dictum tempus velit, vitae auctor justo congue et. Suspendisse sit amet tincidunt nisl. 
               </p>
               <p>
-              Donec porttitor, velit at consectetur posuere, dui diam sodales sem, ut tempus magna arcu id erat. Cras lacinia purus a sem interdum semper.
+                Donec porttitor, velit at consectetur posuere, dui diam sodales sem, ut tempus magna arcu id erat. Cras lacinia purus a sem interdum semper.
               </p>
             </div>            
           </div>
         </div>
       </div>
+
+<!-- Modal -->
+<div class="modal fade" id="criancaModal" tabindex="-1" aria-labelledby="criancaModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header modal-danger">
+        <h5 class="modal-title" id="criancaModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?= $this->Html->image('cartinha_exemplo-1.jpg', ['class' => 'img-fluid']) ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
+        <a id="linkPresentear" href="" class="btn btn-success btn-sm">Presentear</a>
+      </div>
+    </div>
+  </div>
+</div>

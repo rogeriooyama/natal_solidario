@@ -35,7 +35,7 @@ class PagesController extends AppController
     public function initialize(): void
     {
         parent::initialize();
-        $this->Auth->allow(['index', 'adotar', 'confirmacao']);
+        $this->Auth->allow(['index', 'presentear', 'confirmacao']);
     }
 
     /**
@@ -236,7 +236,7 @@ class PagesController extends AppController
         $this->set(compact('criancas','fake','totalcriancas','aguardando','numpresenteadas'));
     }
     
-    public function adotar($id = null)
+    public function presentear($id = null)
     {
         $this->viewBuilder()->setlayout('bootstrap');
         $this->loadModel('Criancas');
