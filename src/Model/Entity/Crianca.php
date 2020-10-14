@@ -40,5 +40,8 @@ class Crianca extends Entity
         'tel_padrinho' => true,
         'email_padrinho' => true,
         'status' => true,
+        'carta' => true,
+        'tamanho_roupa' => true,
+        'tamanho_calcado' => true,
     ];
 }

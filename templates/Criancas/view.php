@@ -34,6 +34,18 @@
                     <td><?= h($crianca->idade) ?></td>
                 </tr>
                 <tr>
+                    <th><?= __('Tamanho da roupa') ?></th>
+                    <td><?= h($crianca->tamanho_roupa) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Tamanho do calçado') ?></th>
+                    <td><?= h($crianca->tamanho_calcado) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Cartinha') ?></th>
+                    <td><?= $this->Html->link('Visualizar', $crianca->carta, ['fullBase' => true, 'target' => '_blank']) ?></td>
+                </tr>
+                <tr>
                     <th><?= __('Nome Padrinho') ?></th>
                     <td><?= h($crianca->nome_padrinho) ?></td>
                 </tr>
@@ -51,7 +63,7 @@
                         <?php
                             switch ($crianca->status) {
                                 case '0':
-                                    echo '>Disponível';
+                                    echo 'Disponível';
                                     break;
                                 
                                 case '1':

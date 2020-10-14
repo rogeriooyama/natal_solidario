@@ -15,6 +15,9 @@
                     <th><?= $this->Paginator->sort('sobrenome') ?></th>
                     <th><?= $this->Paginator->sort('sexo') ?></th>
                     <th><?= $this->Paginator->sort('idade') ?></th>
+                    <th><?= $this->Paginator->sort('tamanho_roupa') ?></th>
+                    <th><?= $this->Paginator->sort('tamanho_calcado') ?></th>
+                    <th><?= $this->Paginator->sort('carta') ?></th>
                     <th><?= $this->Paginator->sort('nome_padrinho') ?></th>
                     <th><?= $this->Paginator->sort('tel_padrinho') ?></th>
                     <th><?= $this->Paginator->sort('status') ?></th>
@@ -28,6 +31,9 @@
                     <td><?= h($crianca->sobrenome) ?></td>
                     <td><?= h($crianca->sexo) ?></td>
                     <td><?= h($crianca->idade) ?></td>
+                    <td><?= h($crianca->tamanho_roupa) ?></td>
+                    <td><?= h($crianca->tamanho_calcado) ?></td>
+                    <td><?= isset($crianca->carta) && !empty($crianca->carta) ? $this->Html->link('Visualizar', $crianca->carta, ['fullBase' => true, 'target' => '_blank']) : ' ' ?></td>
                     <td><?= h($crianca->nome_padrinho) ?></td>
                     <td><?= h($crianca->tel_padrinho) ?></td>
                     <td>

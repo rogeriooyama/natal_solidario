@@ -99,6 +99,24 @@ class CriancasTable extends Table
                 return isset($context['data']['required']);
             });
 
+        $validator
+            ->scalar('carta')
+            ->maxLength('carta', 100)
+            ->requirePresence('carta', 'create')
+            ->notEmptyString('carta');
+
+        $validator
+            ->scalar('tamanho_roupa')
+            ->maxLength('tamanho_roupa', 3)
+            ->requirePresence('tamanho_roupa', 'create')
+            ->notEmptyString('tamanho_roupa');
+
+        $validator
+            ->scalar('tamanho_calcado')
+            ->maxLength('tamanho_calcado', 3)
+            ->requirePresence('tamanho_calcado', 'create')
+            ->notEmptyString('tamanho_calcado');
+
         return $validator;
     }
 }

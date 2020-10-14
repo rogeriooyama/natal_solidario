@@ -18,7 +18,7 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="criancas form content">
-            <?= $this->Form->create($crianca) ?>
+            <?= $this->Form->create($crianca, ['type' => 'file']) ?>
             <fieldset>
                 <legend><?= __('Cadastrar Criança') ?></legend>
                 <?php
@@ -31,6 +31,9 @@
                         'class' => 'form-control mb-2'
                         ]);
                     echo $this->Form->control('idade', ['label' => 'Idade']);
+                    echo $this->Form->control('tamanho_roupa', ['label' => 'Tamanho da roupa']);
+                    echo $this->Form->control('tamanho_calcado', ['label' => 'Tamanho do calçado']);
+                    echo $this->Form->control('carta', ['type' => 'file', 'label' => 'Cartinha<small> (Imagem no formato png ou jpeg)</small>', 'class' => 'form-control mb-2', 'escape' => false]);
                     echo $this->Form->control('observacoes', ['label' => 'Observações']);
                 ?>
             </fieldset>

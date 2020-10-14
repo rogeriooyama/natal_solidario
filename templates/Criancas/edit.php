@@ -31,6 +31,12 @@
                         'class' => 'form-control mb-2'
                         ]);
                     echo $this->Form->control('idade', ['label' => 'Idade']);
+                    echo $this->Form->control('tamanho_roupa', ['label' => 'Tamanho da roupa']);
+                    echo $this->Form->control('tamanho_calcado', ['label' => 'Tamanho do calçado']);
+                    echo $this->Form->control('carta', ['type' => 'file', 'label' => 'Cartinha<small> (Imagem no formato png ou jpeg)</small>', 'class' => 'form-control mb-2', 'escape' => false]);
+                    if(isset($crianca->carta) && !empty($crianca->carta)) {
+                        echo $this->Html->link('Ver cartinha', $crianca->carta, ['fullBase' => true, 'target' => '_blank']);
+                    }
                     echo $this->Form->control('observacoes', ['label' => 'Observações']);
                     echo '<hr/>';
                     echo $this->Form->control('nome_padrinho', ['label' => 'Nome do padrinho']);
