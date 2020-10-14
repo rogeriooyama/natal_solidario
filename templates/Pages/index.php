@@ -1,4 +1,4 @@
-      <div class="row"></div>
+      <div class="row mt-4"></div>
       <div class="row">
         <div class="col-lg-6">
           <div>
@@ -58,19 +58,37 @@
           <div class="content">
             <div class="row">
               <div class="mr-auto">
-                <p class="title">Natal Solidário</p>
+                <p class="title">Natal de Luz</p>
               </div>
               <div class="">
                 <?= $this->Html->image('flower-bells.png', ['class' => 'ml-auto', 'style' => 'height: 70px; vertical-align: super;']) ?>
               </div>  
             </div>            
-            <div class="row mb-3">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus accumsan tristique. Ut ornare, nisi at dignissim aliquam, justo tortor ultrices metus, a euismod orci lacus eget sem. Suspendisse eu euismod mi. Sed eget vulputate lectus, a rutrum eros. Quisque maximus dignissim purus sed commodo. Cras orci risus, mollis vel augue pulvinar, euismod volutpat velit. Morbi dictum tempus velit, vitae auctor justo congue et. Suspendisse sit amet tincidunt nisl. 
-              </p>
-              <p>
-                Donec porttitor, velit at consectetur posuere, dui diam sodales sem, ut tempus magna arcu id erat. Cras lacinia purus a sem interdum semper.
-              </p>
+            <div class="mb-3">
+              <div class="row">
+                <p>
+                  Seja bem-vindo(a) à XX edição do projeto Natal de Luz, em prol de XX crianças atendidas no Lar Santa Filomena, de Presidente Prudente-SP. 
+                </p>
+                <p>
+                  Neste ano desafiador de 2020, nossa tradicional árvore de natal deixou de ser física para ser virtual e nós tivemos que nos reinventar para dar seguimento a este projeto que, muito além de roupas, leva solidariedade e esperança para nossas crianças.
+                </p>
+                <p>
+                  Conecte-se conosco nesta rede de solidariedade!<br/>
+                </p>
+              </div>
+              <div class="row">
+                <p class="subtitle">Como funciona:</p>
+                <p>
+                  A ideia do projeto é a de que o participante escolha uma bola na árvore de natal virtual, selecione uma criança para ser presenteada com, pelo menos, uma roupa completa neste natal. Além  da roupa, o participante poderá, de forma opcional, adicionar calçados e brinquedos ou outro presente. 
+                </p>
+                <p>
+                  Abaixo do nome e idade da criança, clique em ver cartinha e conheça um pouquinho da criança favorecida. Ao final, clique em presentear e terá todas as informações necessárias.
+                  Cadastre-se para que possamos entrar em contato e combinar com você a melhor forma de fazer isso acontecer.
+                </p>
+                <p>
+                  O projeto Natal de Luz encerra no dia XX/XX/2020, às XXh.
+                </p>
+              </div>
             </div>            
           </div>
         </div>

@@ -47,6 +47,12 @@ main {
     vertical-align: baseline;
 }
 
+.subtitle { 
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.4rem;
+    color: #8a081f;
+}
+
 .tree {
     margin:40px 40px 0px 40px;
     position: relative;
