@@ -18,7 +18,7 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="criancas form content">
-            <?= $this->Form->create($crianca) ?>
+            <?= $this->Form->create($crianca, ['type' => 'file']) ?>
             <fieldset>
                 <legend><?= __('Editar Criança') ?></legend>
                 <?php

@@ -29,8 +29,8 @@
 
         $("#linkPresentear").attr("href",'pages/presentear/'+id);
 
-        $("#urlCarta").attr("src",'img/cartinha_exemplo-1.jpg');
-        // $("#urlCarta").attr("src",'carta/'+carta);
+        //$("#urlCarta").attr("src",'cartas/cartinha_exemplo-1.jpg');
+        $("#urlCarta").attr("src",'./'+carta);
       });
     </script>
     <title>Natal Solidário</title>
