@@ -65,11 +65,11 @@
               </div>  
             </div>            
             <div class="mb-3">
-              <div class="row">
-                <p align="justify">
+              <div class="row text-justify">
+                <p>
                   Seja bem-vindo(a) à XX edição do projeto Natal de Luz, em prol de XX crianças atendidas no Lar Santa Filomena, de Presidente Prudente-SP. 
                 </p>
-                <p align="justify">
+                <p>
                   Neste ano desafiador de 2020, nossa tradicional árvore de natal deixou de ser física para ser virtual e nós tivemos que nos reinventar para dar seguimento a este projeto que, muito além de roupas, leva solidariedade e esperança para nossas crianças.
                 </p>
                 <p>
@@ -78,14 +78,14 @@
               </div>
               <div class="row">
                 <p class="subtitle">Como funciona:</p>
-                <p align="justify">
+                <p>
                   A ideia do projeto é a de que o participante escolha uma bola na árvore de natal virtual, selecione uma criança para ser presenteada com, pelo menos, uma roupa completa neste natal. Além  da roupa, o participante poderá, de forma opcional, adicionar calçados e brinquedos ou outro presente. 
                 </p>
-                <p align="justify">
+                <p>
                   Abaixo do nome e idade da criança, clique em ver cartinha e conheça um pouquinho da criança favorecida. Ao final, clique em presentear e terá todas as informações necessárias.
                   Cadastre-se para que possamos entrar em contato e combinar com você a melhor forma de fazer isso acontecer.
                 </p>
-                <p align="justify">
+                <p>
                   O projeto Natal de Luz encerra no dia 30/11/2020. <br>
                   Entrega dos presentes até 04/12/2020. <br>
                   Local de entrega: Lar Santa Filomena, R. Luís Carlos Ferrari, 125 - Jardim Itapura I e II, Pres. Prudente - SP
