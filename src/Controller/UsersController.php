@@ -122,4 +122,8 @@ class UsersController extends AppController
         $this->Flash->success('Você foi desconectado do sistema.');
         return $this->redirect($this->Auth->logout());
     }
+
+    public function manual()
+    {
+    }
 }

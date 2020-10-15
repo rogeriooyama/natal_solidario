@@ -42,6 +42,7 @@ $cakeDescription = 'Árvore Natalina';
         </div>
         <div class="top-nav-links">        
             <?= $this->Html->link(__('Ir para o site'), ['controller' => 'pages', 'action' => 'index'], ['target' => '_blank']) ?>
+            <?= $this->Html->link(__('Manual'), ['controller' => 'users', 'action' => 'manual']) ?>
             <?= $this->Html->link(__('Administradores'), ['controller' => 'users', 'action' => 'index']) ?>
             <?= $this->Html->link(__('Crianças'), ['controller' => 'criancas', 'action' => 'index']) ?>
             <?= $this->Html->link(__('Sair'), ['controller' => 'users', 'action' => 'logout']) ?>
