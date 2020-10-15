@@ -12,7 +12,7 @@
                       <h3><?= $criancas[$i]['nome'] ?></h3>
                       <p><?= $criancas[$i]['idade']?> anos</p>                                
                       <?php if ($criancas[$i]['status'] == 0) : ?>
-                        <button id="<?= $criancas[$i]['id'] ?>" title="Cartinha de <?= $criancas[$i]['nome'] ?> - <?= $criancas[$i]['idade'] ?> anos" type="button" class="btn btn-info btn-sm open-modal" data-toggle="modal" data-target="#criancaModal">
+                        <button carta="<?= $criancas[$i]['carta'] ?>" id="<?= $criancas[$i]['id'] ?>" title="Cartinha de <?= $criancas[$i]['nome'] ?> - <?= $criancas[$i]['idade'] ?> anos" type="button" class="btn btn-info btn-sm open-modal" data-toggle="modal" data-target="#criancaModal">
                           Ver cartinha
                         </button>
                       <?php else : ?>
@@ -105,7 +105,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <?= $this->Html->image('cartinha_exemplo-1.jpg', ['class' => 'img-fluid']) ?>
+        <img id="urlCarta" src="" class="img-fluid" alt="Imagem da cartinha">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>

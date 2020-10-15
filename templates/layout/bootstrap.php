@@ -22,10 +22,15 @@
 
       $(document).on("click", ".open-modal", function () {
         var title = $(this).attr( "title" );
+        var id = $(this).attr( "id" );
+        var carta = $(this).attr( "carta" );
+
         $( "#criancaModalLabel" ).text( title );
 
-        var id = $(this).attr( "id" );
         $("#linkPresentear").attr("href",'pages/presentear/'+id);
+
+        $("#urlCarta").attr("src",'img/cartinha_exemplo-1.jpg');
+        // $("#urlCarta").attr("src",'carta/'+carta);
       });
     </script>
     <title>Natal Solidário</title>
