@@ -57,6 +57,9 @@ class UsersController extends AppController
         $user = $this->Users->newEmptyEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
+            $user->nome = ucfirst($user->nome);
+            $user->sobrenome = ucfirst($user->sobrenome);
+            $user->username = strtolower($user->username);
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('O administrador foi cadastrado.'));
 
@@ -81,9 +84,12 @@ class UsersController extends AppController
             'contain' => [],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());
+            $user = $this->Users->patchEntity($user, $this->request->getData());            
+            $user->nome = ucfirst($user->nome);
+            $user->sobrenome = ucfirst($user->sobrenome);
+            $user->username = strtolower($user->username);
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('O administrador foi cadastrado.'));
+                $this->Flash->success(__('O administrador foi alterado.'));
 
                 return $this->redirect(['action' => 'index']);
             }

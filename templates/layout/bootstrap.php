@@ -30,7 +30,7 @@
         $("#linkPresentear").attr("href",'pages/presentear/'+id);
 
         //$("#urlCarta").attr("src",'cartas/cartinha_exemplo-1.jpg');
-        $("#urlCarta").attr("src",'./'+carta);
+        $("#urlCarta").attr("src",'./' + carta);
       });
     </script>
     <title>Natal Solidário</title>

@@ -123,6 +123,19 @@
     '/adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min'
   ]) 
 ?>
+  <script>
+    $(document).on("click", ".open-modal", function () {
+      var title = $(this).attr( "title" );
+      var id = $(this).attr( "id" );
+      var carta = $(this).attr( "carta" );
 
+      $( "#criancaModalLabel" ).text( title );
+
+      $("#linkPresentear").attr("href",'pages/presentear/'+id);
+
+      //$("#urlCarta").attr("src",'cartas/cartinha_exemplo-1.jpg');
+      $("#urlCarta").attr("src",'./'+carta);
+    });
+  </script>
 </body>
 </html>

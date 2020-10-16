@@ -58,25 +58,26 @@ class CriancasTable extends Table
             ->scalar('nome')
             ->maxLength('nome', 13, 'O primeiro nome da criança deverá ter 13 letras no máximo')
             ->requirePresence('nome', 'create')
-            ->notEmptyString('nome');
+            ->notEmptyString('nome', 'Preencha o nome da criança');
 
         $validator
             ->scalar('sobrenome')
             ->maxLength('sobrenome', 50)
             ->requirePresence('sobrenome', 'create')
-            ->notEmptyString('sobrenome');
+            ->notEmptyString('sobrenome', 'Preencha o sobrenome da criança');
 
         $validator
             ->scalar('sexo')
             ->maxLength('sexo', 10)
             ->requirePresence('sexo', 'create')
-            ->notEmptyString('sexo');
+            ->notEmptyString('sexo', 'Informe o sexo da criança');
 
         $validator
             ->scalar('idade')
             ->maxLength('idade', 3)
             ->requirePresence('idade', 'create')
-            ->notEmptyString('idade');
+            ->notEmptyString('idade', 'Informe a idade da criança')
+            ->numeric('idade', 'Apenas números são permitidos');
 
         $validator
             ->scalar('nome_padrinho')
@@ -103,19 +104,21 @@ class CriancasTable extends Table
             ->scalar('carta')
             ->maxLength('carta', 100)
             ->requirePresence('carta', 'create')
-            ->notEmptyString('carta');
+            ->notEmptyString('carta', 'Selecione um arquivo de imagem');
 
         $validator
             ->scalar('tamanho_roupa')
             ->maxLength('tamanho_roupa', 3)
             ->requirePresence('tamanho_roupa', 'create')
-            ->notEmptyString('tamanho_roupa');
+            ->notEmptyString('tamanho_roupa', 'Informe o tamanho da roupa')
+            ->numeric('tamanho_roupa', 'Apenas números são permitidos');
 
         $validator
             ->scalar('tamanho_calcado')
             ->maxLength('tamanho_calcado', 3)
             ->requirePresence('tamanho_calcado', 'create')
-            ->notEmptyString('tamanho_calcado');
+            ->notEmptyString('tamanho_calcado', 'informe o tamanho do calçado')
+            ->numeric('tamanho_calcado', 'Apenas números são permitidos');
 
         return $validator;
     }

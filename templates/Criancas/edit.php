@@ -20,7 +20,7 @@
             $this->Form->setTemplates($myTemplates);
             $this->Form->setConfig('errorClass', 'is-invalid');
         ?>
-        <?= $this->Form->create($crianca, ['type' => 'file']) ?>
+        <?= $this->Form->create($crianca) ?>
         <div class="row">
             <div class="col-md-10 mx-auto">
                 <div class="card card-secondary">
@@ -41,8 +41,25 @@
                                 echo $this->Form->control('idade', ['label' => 'Idade', 'class' => 'form-control mb-2']);
                                 echo $this->Form->control('tamanho_roupa', ['label' => 'Tamanho da roupa', 'class' => 'form-control mb-2']);
                                 echo $this->Form->control('tamanho_calcado', ['label' => 'Tamanho do calçado', 'class' => 'form-control mb-2']);
-                                echo $this->Form->control('carta', ['type' => 'file', 'label' => 'Cartinha<small> (Imagem no formato png ou jpeg)</small>', 'class' => 'form-control mb-2', 'escape' => false]);
                                 echo $this->Form->control('observacoes', ['label' => 'Observações', 'class' => 'form-control mb-2']);
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <div class="card card-secondary">
+                    <div class="card-header cursor-pointer" data-toggle="collapse" href="#body1">
+                        <h3 class="card-title">Informações do padrinho</h3>
+                    </div>
+                    <div class="card-body collapse show" id="body1">
+                        <div class="form-group">
+                            <?php
+                                echo $this->Form->control('nome_padrinho', ['label' => 'Nome do Padrinho', 'class' => 'form-control mb-2']);
+                                echo $this->Form->control('tel_padrinho', ['label' => 'Telefone do Padrinho', 'class' => 'form-control mb-2']);
+                                echo $this->Form->control('email_padrinho', ['label' => 'Email do Padrinho', 'class' => 'form-control mb-2']);
                             ?>
                         </div>
                     </div>

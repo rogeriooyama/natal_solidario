@@ -117,8 +117,7 @@
         <?= $this->Html->image($crianca->carta, ['class' => 'img-fluid']) ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
-        <a id="linkPresentear" href="" class="btn btn-success btn-sm">Presentear</a>
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>

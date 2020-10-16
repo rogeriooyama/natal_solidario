@@ -22,7 +22,7 @@
           </li>
           <li class="nav-item has-treeview">
             <a href="<?= $this->Url->build(['controller' => 'users', 'action' => 'index']) ?>" class="nav-link">
-              <i class="nav-icon fas fa-lightbulb"></i>
+              <i class="nav-icon fas fa-user-cog"></i>
               <p>
                 Administradores
               </p>
@@ -30,7 +30,7 @@
           </li>
           <li class="nav-item has-treeview">
             <a href="<?= $this->Url->build(['controller' => 'criancas', 'action' => 'index']) ?>" class="nav-link">
-              <i class="nav-icon fas fa-file-contract"></i>
+              <i class="nav-icon fas fa-child"></i>
               <p>
                 Crianças
               </p>
@@ -38,7 +38,7 @@
           </li>
           <li class="nav-item has-treeview">
             <a href="<?= $this->Url->build(['controller' => 'users', 'action' => 'logout']) ?>" class="nav-link">
-              <i class="nav-icon fas fa-gavel"></i>
+              <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Sair
               </p>

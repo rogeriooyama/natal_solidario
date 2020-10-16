@@ -44,7 +44,13 @@
                                 <td><?= h($crianca->idade) ?></td>
                                 <td><?= h($crianca->tamanho_roupa) ?></td>
                                 <td><?= h($crianca->tamanho_calcado) ?></td>
-                                <td><?= isset($crianca->carta) && !empty($crianca->carta) ? $this->Html->link('Visualizar', $crianca->carta, ['fullBase' => true, 'target' => '_blank']) : ' ' ?></td>
+                                <td class="text-nowrap">
+                                    <?php if(isset($crianca->carta) && !empty($crianca->carta)) : ?>
+                                        <button carta="<?= '/..' . $crianca->carta ?>" title="Cartinha de <?= $crianca->nome ?>" type="button" class="btn btn-info btn-sm open-modal" data-toggle="modal" data-target="#criancaModal">
+                                        <i class="far fa-eye"></i> Ver cartinha
+                                        </button>
+                                    <?php endif; ?>                                    
+                                </td>
                                 <td><?= h($crianca->nome_padrinho) ?></td>
                                 <td><?= h($crianca->tel_padrinho) ?></td>
                                 <td>
@@ -67,7 +73,8 @@
                                 </td>
                                     <td class="actions text-nowrap">
                                         <?= $this->Html->link('<i class="far fa-eye"></i> visualizar', ['action' => 'view', $crianca->id], ['class' => 'btn btn-info btn-sm', 'escape' => false]) ?>
-                                        <?= $this->Html->link('<i class="far fa-edit"></i> editar', ['action' => 'edit', $crianca->id], ['class' => 'btn btn-warning btn-sm', 'escape' => false]) ?>
+                                        <?= $this->Html->link('<i class="far fa-edit"></i> editar', ['action' => 'edit', $crianca->id], ['class' => 'btn btn-warning btn-sm', 'escape' => false]) ?>                                        
+                                        <?= $this->Html->link('<i class="fas fa-envelope-open-text"></i> cartinha', ['action' => 'carta', $crianca->id], ['class' => 'btn btn-primary btn-sm', 'escape' => false]) ?>
                                         <?= $this->Form->postLink('<i class="far fa-trash-alt"></i> excluir', ['action' => 'delete', $crianca->id], ['confirm' => __("Tem certeza que quer deletar o gestor '".$crianca->username."'?"), 'class' => 'btn btn-danger btn-sm', 'escape' => false]) ?>
                                     </td>
                                 </tr>
@@ -81,3 +88,23 @@
         </div>
     </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="criancaModal" tabindex="-1" aria-labelledby="criancaModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header modal-danger">
+        <h5 class="modal-title" id="criancaModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img id="urlCarta" src="" class="img-fluid" alt="Imagem da cartinha">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
