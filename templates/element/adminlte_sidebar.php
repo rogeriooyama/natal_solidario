@@ -20,6 +20,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="<?= $this->Url->build(['controller' => 'users', 'action' => 'manual']) ?>" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Manual
+              </p>
+            </a>
+          </li>
           <li class="nav-item has-treeview">
             <a href="<?= $this->Url->build(['controller' => 'users', 'action' => 'index']) ?>" class="nav-link">
               <i class="nav-icon fas fa-user-cog"></i>

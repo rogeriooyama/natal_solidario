@@ -4,12 +4,15 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
+<section class="content">
+<div class="container-fluid">
 <div class="row">
-    <div class="users index content">
+<div class="col-12">
+    <div class="card">
 <h3><b>Manual do sistema Natal de Luz</b></h3>
-O software é composto por dois módulos: <br>
-    &emsp;- Exibição da árvore com as crianças.<br>
-	&emsp;- Módulo de gerenciamento. <br><br><br>
+<p>O software é composto por dois módulos: </p>
+    <p>&emsp;- Exibição da árvore com as crianças.</p>
+	<p>&emsp;- Módulo de gerenciamento. </p><br><br>
 	
 <h4><b>Módulo de exibição da árvore</b></h1>
 <h5><b>Funcionamento:</b></h5>
@@ -30,4 +33,7 @@ O software é composto por dois módulos: <br>
 		<p align="justify">&emsp;- Na funcionalidade "Editar criança", além das informações cadastradas relativas à criança, serão exibidos campos relativos ao padrinho da mesma que somente serão preenchidos
 		automaticamente no momento que a criança for escolhida para ser presenteada através do módulo de exibição da árvore.</p> <br>
     </div>
+    </div>
 </div>
+</div>
+</section>

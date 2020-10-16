@@ -276,4 +276,8 @@ class PagesController extends AppController
     {
         $this->viewBuilder()->setlayout('bootstrap');
     }
+
+    public function manual()
+    {
+    }
 }
