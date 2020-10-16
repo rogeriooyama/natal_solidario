@@ -6,6 +6,8 @@
 /logs/*
 /tmp/*
 /vendor/*
+/webroot/adminlte/plugins/*
+/webroot/adminlte/dist/img/*
 
 # OS generated files #
 ######################

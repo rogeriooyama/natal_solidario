@@ -11,6 +11,12 @@ namespace App\Controller;
  */
 class UsersController extends AppController
 {
+    public function initialize(): void
+    {
+        parent::initialize();
+        $this->viewBuilder()->setlayout('adminlte');
+    }
+
     /**
      * Index method
      *
@@ -21,6 +27,7 @@ class UsersController extends AppController
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
+        $this->set("title_for_layout", "Administradores"); //Titulo da Página
     }
 
     /**
@@ -37,6 +44,7 @@ class UsersController extends AppController
         ]);
 
         $this->set(compact('user'));
+        $this->set("title_for_layout", "Visualizar administrador"); //Titulo da Página
     }
 
     /**
@@ -57,6 +65,7 @@ class UsersController extends AppController
             $this->Flash->error(__('Ocorreu um erro. Tente novamente.'));
         }
         $this->set(compact('user'));
+        $this->set("title_for_layout", "Novo Administrador"); //Titulo da Página
     }
 
     /**
@@ -81,6 +90,7 @@ class UsersController extends AppController
             $this->Flash->error(__('Ocorreu um erro. Tente novamente.'));
         }
         $this->set(compact('user'));
+        $this->set("title_for_layout", "Editar Administrador"); //Titulo da Página
     }
 
     /**
@@ -115,6 +125,7 @@ class UsersController extends AppController
                 $this->Flash->error(__('Nome de usuário ou senha está incorreto'));
             }
         }
+        $this->set("title_for_layout", "Login"); //Titulo da Página
     }
 
     public function logout()

@@ -11,6 +11,12 @@ namespace App\Controller;
  */
 class CriancasController extends AppController
 {
+    public function initialize(): void
+    {
+        parent::initialize();
+        $this->viewBuilder()->setlayout('adminlte');
+    }
+
     /**
      * Index method
      *
@@ -18,7 +24,7 @@ class CriancasController extends AppController
      */
     public function index()
     {
-        $this->paginate = ['order' => ['status' => 'desc', 'nome' => 'asc']];
+        $this->paginate = ['order' => ['status' => 'desc', 'nome' => 'asc'], 'limit' => 5,];
         $criancas = $this->paginate($this->Criancas);
 
         $this->set(compact('criancas'));

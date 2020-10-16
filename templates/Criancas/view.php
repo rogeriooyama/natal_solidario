@@ -1,90 +1,125 @@
+<!-- Breadcrumbs -->
 <?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Crianca $crianca
- */
+    $this->Breadcrumbs->add([
+        ['title' => 'Criancas', 'url' => ['controller' => 'criancas', 'action' => 'index']],
+        ['title' => 'Visualizar']
+    ]);
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Ações') ?></h4>
-            <?= $this->Html->link(__('Editar Criança'), ['action' => 'edit', $crianca->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Excluir Criança'), ['action' => 'delete', $crianca->id], ['confirm' => __('Deseja realmente excluir?'), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('Listar Crianças'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('Cadastrar Criança'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="criancas view content">
-            <table>
-                <tr>
-                    <th><?= __('Nome') ?></th>
-                    <td><?= h($crianca->nome) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Sobrenome') ?></th>
-                    <td><?= h($crianca->sobrenome) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Sexo') ?></th>
-                    <td><?= h($crianca->sexo) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Idade') ?></th>
-                    <td><?= h($crianca->idade) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Tamanho da roupa') ?></th>
-                    <td><?= h($crianca->tamanho_roupa) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Tamanho do calçado') ?></th>
-                    <td><?= h($crianca->tamanho_calcado) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Cartinha') ?></th>
-                    <td><?= $this->Html->link('Visualizar', $crianca->carta, ['fullBase' => true, 'target' => '_blank']) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Nome Padrinho') ?></th>
-                    <td><?= h($crianca->nome_padrinho) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Tel Padrinho') ?></th>
-                    <td><?= h($crianca->tel_padrinho) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Email Padrinho') ?></th>
-                    <td><?= h($crianca->email_padrinho) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Status') ?></th>
-                    <td>
-                        <?php
-                            switch ($crianca->status) {
-                                case '0':
-                                    echo 'Disponível';
-                                    break;
-                                
-                                case '1':
-                                    echo 'Aguardando contato';
-                                    break;
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class=" col-md-8 offset-md-2">
+                <div class="card card-secondary">
+                    <div class="card-header">
+                        <h4 class="mb-0">
+                            Visualizar criança
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="mb-0">Detalhes</h4>
+                            </div>
+                            <div class="card-body p-0">
+                                <table class="table table-sm">
+                                <tr>
+                                    <th><?= __('Nome') ?></th>
+                                    <td><?= h($crianca->nome) ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Sobrenome') ?></th>
+                                    <td><?= h($crianca->sobrenome) ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Sexo') ?></th>
+                                    <td><?= h($crianca->sexo) ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Idade') ?></th>
+                                    <td><?= h($crianca->idade) ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Tamanho da roupa') ?></th>
+                                    <td><?= h($crianca->tamanho_roupa) ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Tamanho do calçado') ?></th>
+                                    <td><?= h($crianca->tamanho_calcado) ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Cartinha') ?></th>
+                                    <td>
+                                    <?php if ($crianca->carta) : ?>
+                                        <button type="button" class="btn btn-info btn-sm open-modal" data-toggle="modal" data-target="#criancaModal">
+                                            Ver cartinha
+                                        </button>
+                                    <?php else : ?>
+                                        Não possui cartinha
+                                    <?php endif; ?>
+                                    
+                                    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Nome Padrinho') ?></th>
+                                    <td><?= h($crianca->nome_padrinho) ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Tel Padrinho') ?></th>
+                                    <td><?= h($crianca->tel_padrinho) ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Email Padrinho') ?></th>
+                                    <td><?= h($crianca->email_padrinho) ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Status') ?></th>
+                                    <td>
+                                        <?php
+                                            switch ($crianca->status) {
+                                                case '0':
+                                                    echo 'Disponível';
+                                                    break;
+                                                
+                                                case '1':
+                                                    echo 'Aguardando contato';
+                                                    break;
 
-                                case '2':
-                                    echo 'Confirmado';
-                                    break;
-                            }
-                            $crianca->status 
-                        ?>
-                    </td>
-                </tr>
-            </table>
-            <div class="text">
-                <strong><?= __('Observacoes') ?></strong>
-                <blockquote>
-                    <?= $this->Text->autoParagraph(h($crianca->observacoes)); ?>
-                </blockquote>
+                                                case '2':
+                                                    echo 'Confirmado';
+                                                    break;
+                                            }
+                                            $crianca->status 
+                                        ?>
+                                    </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="criancaModal" tabindex="-1" aria-labelledby="criancaModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header modal-danger">
+        <h5 class="modal-title" id="criancaModalLabel">Cartinha de <?= $crianca->nome ?></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?= $this->Html->image($crianca->carta, ['class' => 'img-fluid']) ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
+        <a id="linkPresentear" href="" class="btn btn-success btn-sm">Presentear</a>
+      </div>
+    </div>
+  </div>
 </div>

@@ -63,6 +63,14 @@ class AppController extends Controller
                 ]
             ]);
 
+            $loggedId = $this->Auth->user('id');        
+        if (isset($loggedId)) {
+            $this->loadModel('Users');
+            $this->set('userLogged', $this->Users->get($loggedId));
+        } else {
+            $this->Auth->logout();
+        }  
+
         /*
          * Enable the following component for recommended CakePHP form protection settings.
          * see https://book.cakephp.org/4/en/controllers/components/form-protection.html

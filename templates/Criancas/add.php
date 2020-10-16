@@ -1,44 +1,57 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\Crianca $crianca
+ * @var \App\Model\Entity\Manager $manager
  */
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Ações') ?></h4>
-            <?= $this->Form->postLink(
-                __('Excluir'),
-                ['action' => 'delete', $crianca->id],
-                ['confirm' => __('Deseja realmente excluir?'), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('Listar Crianças'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+<!-- Breadcrumbs -->
+<?php
+    $this->Breadcrumbs->add([
+        ['title' => 'Crianças', 'url' => ['controller' => 'criancas', 'action' => 'index']],
+        ['title' => 'Adicionar']
+    ]);
+?>
+<section class="content">
+    <div class="container-fluid">
+        <?php  
+            $myTemplates = [
+                'error' => '<div class="error invalid-feedback">{{content}}</div>',
+            ];
+            $this->Form->setTemplates($myTemplates);
+            $this->Form->setConfig('errorClass', 'is-invalid');
+        ?>
+        <?= $this->Form->create($crianca, ['type' => 'file']) ?>
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <div class="card card-secondary">
+                    <div class="card-header cursor-pointer" data-toggle="collapse" href="#body1">
+                        <h3 class="card-title">Nova criança</h3>
+                    </div>
+                    <div class="card-body collapse show" id="body1">
+                        <div class="form-group">
+                            <?php
+                                echo $this->Form->control('nome', ['label' => 'Nome', 'class' => 'form-control mb-2']);
+                                echo $this->Form->control('sobrenome', ['label' => 'Sobrenome', 'class' => 'form-control mb-2']);
+                                echo $this->Form->control('sexo', [
+                                    'label' => 'Sexo', 
+                                    'type' => 'select',
+                                    'options' => [''=>'', 'Masculino' => 'Masculino', 'Feminino' => 'Feminino'],
+                                    'class' => 'form-control mb-2'
+                                    ]);
+                                echo $this->Form->control('idade', ['label' => 'Idade', 'class' => 'form-control mb-2']);
+                                echo $this->Form->control('tamanho_roupa', ['label' => 'Tamanho da roupa', 'class' => 'form-control mb-2']);
+                                echo $this->Form->control('tamanho_calcado', ['label' => 'Tamanho do calçado', 'class' => 'form-control mb-2']);
+                                echo $this->Form->control('carta', ['type' => 'file', 'label' => 'Cartinha<small> (Imagem no formato png ou jpeg)</small>', 'class' => 'form-control mb-2', 'escape' => false]);
+                                echo $this->Form->control('observacoes', ['label' => 'Observações', 'class' => 'form-control mb-2']);
+                            ?>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <?= $this->Form->button(__('Adicionar Criança'),['class'=>'btn btn-block btn-primary col-md-6 offset-md-3']) ?>
+                    </div>
+                </div>
+            </div>
         </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="criancas form content">
-            <?= $this->Form->create($crianca, ['type' => 'file']) ?>
-            <fieldset>
-                <legend><?= __('Cadastrar Criança') ?></legend>
-                <?php
-                    echo $this->Form->control('nome', ['label' => 'Nome']);
-                    echo $this->Form->control('sobrenome', ['label' => 'Sobrenome']);
-                    echo $this->Form->control('sexo', [
-                        'label' => 'Sexo', 
-                        'type' => 'select',
-                        'options' => [''=>'', 'Masculino' => 'Masculino', 'Feminino' => 'Feminino'],
-                        'class' => 'form-control mb-2'
-                        ]);
-                    echo $this->Form->control('idade', ['label' => 'Idade']);
-                    echo $this->Form->control('tamanho_roupa', ['label' => 'Tamanho da roupa']);
-                    echo $this->Form->control('tamanho_calcado', ['label' => 'Tamanho do calçado']);
-                    echo $this->Form->control('carta', ['type' => 'file', 'label' => 'Cartinha<small> (Imagem no formato png ou jpeg)</small>', 'class' => 'form-control mb-2', 'escape' => false]);
-                    echo $this->Form->control('observacoes', ['label' => 'Observações']);
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submeter')) ?>
-            <?= $this->Form->end() ?>
-        </div>
+        <?= $this->Form->end() ?>
     </div>
-</div>
+</section>
