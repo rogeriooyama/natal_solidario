@@ -63,10 +63,11 @@ class CriancasController extends AppController
                 return $this->redirect(['action' => 'add']);
             }
             $ext = pathinfo($file->getClientFilename(), PATHINFO_EXTENSION);
-            $crianca['carta'] = '/cartas/' . $crianca->nome . '-' . $crianca->sobrenome . '.' . $ext;
+            $hash = md5(uniqid((string)time()));
+            $crianca['carta'] = '/cartas/' . $crianca->nome . '-' . $crianca->sobrenome . '-' . $hash . '.' . $ext;
             if ($this->Criancas->save($crianca)) {
                 $this->Flash->success(__('A criança foi cadastrada.'));
-                $path = WWW_ROOT . 'cartas' . DS . $crianca->nome . '-' . $crianca->sobrenome . '.' . $ext;
+                $path = WWW_ROOT . 'cartas' . DS . $crianca->nome . '-' . $crianca->sobrenome . '-' . $hash . '.' . $ext;
                 $file->moveTo($path);
                 return $this->redirect(['action' => 'index']);
             }
@@ -89,9 +90,19 @@ class CriancasController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData());
+            $file = $this->request->getData("carta");
+            $valid_extensions = array("image/png", "image/jpeg", "image/jpg");
+            if (!in_array($file->getClientMediaType(), $valid_extensions)) {
+                $this->Flash->warning(__('Apenas arquivos JPEG ou PNG são permitdos.'));
+                return $this->redirect(['action' => 'add']);
+            }
+            $ext = pathinfo($file->getClientFilename(), PATHINFO_EXTENSION);
+            $hash = md5(uniqid((string)time()));
+            $crianca['carta'] = '/cartas/' . $crianca->nome . '-' . $crianca->sobrenome . '-' . $hash . '.' . $ext;
             if ($this->Criancas->save($crianca)) {
                 $this->Flash->success(__('A criança foi alterada.'));
-
+                $path = WWW_ROOT . 'cartas' . DS . $crianca->nome . '-' . $crianca->sobrenome . '-' . $hash . '.' . $ext;
+                $file->moveTo($path);
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('Ocorreu um erro. Tente novamente.'));
