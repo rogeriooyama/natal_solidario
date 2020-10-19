@@ -75,7 +75,7 @@
                                         <?= $this->Html->link('<i class="far fa-eye"></i> visualizar', ['action' => 'view', $crianca->id], ['class' => 'btn btn-info btn-sm', 'escape' => false]) ?>
                                         <?= $this->Html->link('<i class="far fa-edit"></i> editar', ['action' => 'edit', $crianca->id], ['class' => 'btn btn-warning btn-sm', 'escape' => false]) ?>                                        
                                         <?= $this->Html->link('<i class="fas fa-envelope-open-text"></i> cartinha', ['action' => 'carta', $crianca->id], ['class' => 'btn btn-primary btn-sm', 'escape' => false]) ?>
-                                        <?= $this->Form->postLink('<i class="far fa-trash-alt"></i> excluir', ['action' => 'delete', $crianca->id], ['confirm' => __("Tem certeza que quer deletar o gestor '".$crianca->username."'?"), 'class' => 'btn btn-danger btn-sm', 'escape' => false]) ?>
+                                        <?= $this->Form->postLink('<i class="far fa-trash-alt"></i> excluir', ['action' => 'delete', $crianca->id], ['confirm' => __("Tem certeza que quer excluir a criança ".$crianca->nome."'?"), 'class' => 'btn btn-danger btn-sm', 'escape' => false]) ?>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
