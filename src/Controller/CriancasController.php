@@ -28,6 +28,7 @@ class CriancasController extends AppController
         $criancas = $this->paginate($this->Criancas);
 
         $this->set(compact('criancas'));
+        $this->set("title_for_layout", "Crianças"); //Titulo da Página
     }
 
     /**
@@ -44,6 +45,7 @@ class CriancasController extends AppController
         ]);
 
         $this->set(compact('crianca'));
+        $this->set("title_for_layout", "Visualizar Criança"); //Titulo da Página
     }
 
     /**
@@ -82,6 +84,7 @@ class CriancasController extends AppController
             $this->Flash->error(__('Ocorreu um erro. Tente novamente.'));
         }
         $this->set(compact('crianca'));
+        $this->set("title_for_layout", "Adicionar Criança"); //Titulo da Página
     }
 
     /**
@@ -105,6 +108,7 @@ class CriancasController extends AppController
             $this->Flash->error(__('Ocorreu um erro. Tente novamente.'));
         }
         $this->set(compact('crianca'));
+        $this->set("title_for_layout", "Editar Criança"); //Titulo da Página
     }
 
     public function carta($id = null)
@@ -137,6 +141,7 @@ class CriancasController extends AppController
             $this->Flash->error(__('Ocorreu um erro. Tente novamente.'));
         }
         $this->set(compact('crianca'));
+        $this->set("title_for_layout", "Atualizar Cartinha"); //Titulo da Página
     }
 
     /**
