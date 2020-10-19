@@ -27,6 +27,7 @@
                                 <th><?= $this->Paginator->sort('sexo') ?></th>
                                 <th><?= $this->Paginator->sort('idade') ?></th>
                                 <th><?= $this->Paginator->sort('tamanho_roupa') ?></th>
+                                <th><?= $this->Paginator->sort('tamanho_calca') ?></th>
                                 <th><?= $this->Paginator->sort('tamanho_calcado') ?></th>
                                 <th><?= $this->Paginator->sort('carta') ?></th>
                                 <th><?= $this->Paginator->sort('nome_padrinho') ?></th>
@@ -43,6 +44,7 @@
                                 <td><?= h($crianca->sexo) ?></td>
                                 <td><?= h($crianca->idade) ?></td>
                                 <td><?= h($crianca->tamanho_roupa) ?></td>
+                                <td><?= h($crianca->tamanho_calca) ?></td>
                                 <td><?= h($crianca->tamanho_calcado) ?></td>
                                 <td class="text-nowrap">
                                     <?php if(isset($crianca->carta) && !empty($crianca->carta)) : ?>

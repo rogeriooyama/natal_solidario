@@ -15,7 +15,8 @@
                 </p>
                 <p align="justify">
                     Você escolheu presentear <?= ($crianca->sexo == 'Masculino') ? 'o' : 'a'; ?> <?= $crianca->nome . ' ' . $crianca->sobrenome ?> de  <?= $crianca->idade . ' anos.'  ?><br>
-                    Tamanho da roupa: <?= $crianca->tamanho_roupa ?><br>
+                    Tamanho da camiseta/blusa: <?= $crianca->tamanho_roupa ?><br>
+                    Tamanho da calça/short: <?= $crianca->tamanho_calca ?><br>
                     Tamanho do calçado: <?= $crianca->tamanho_calcado ?><br>
                     <button onClick="window.print()">Salvar informações</button>
                 </p>

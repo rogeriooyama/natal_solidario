@@ -39,7 +39,8 @@
                                     'class' => 'form-control mb-2'
                                     ]);
                                 echo $this->Form->control('idade', ['label' => 'Idade', 'class' => 'form-control mb-2']);
-                                echo $this->Form->control('tamanho_roupa', ['label' => 'Tamanho da roupa', 'class' => 'form-control mb-2']);
+                                echo $this->Form->control('tamanho_roupa', ['label' => 'Tamanho da camiseta/blusa', 'class' => 'form-control mb-2']);
+                                echo $this->Form->control('tamanho_calca', ['label' => 'Tamanho da calça/short', 'class' => 'form-control mb-2']);
                                 echo $this->Form->control('tamanho_calcado', ['label' => 'Tamanho do calçado', 'class' => 'form-control mb-2']);
                                 echo $this->Form->control('carta', ['type' => 'file', 'label' => 'Cartinha<small> (Imagem no formato png ou jpeg)</small>', 'class' => 'form-control mb-2', 'escape' => false]);
                                 echo $this->Form->control('observacoes', ['label' => 'Observações', 'class' => 'form-control mb-2']);

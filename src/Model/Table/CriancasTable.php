@@ -114,6 +114,13 @@ class CriancasTable extends Table
             ->numeric('tamanho_roupa', 'Apenas números são permitidos');
 
         $validator
+            ->scalar('tamanho_calca')
+            ->maxLength('tamanho_calca', 3)
+            ->requirePresence('tamanho_calca', 'create')
+            ->notEmptyString('tamanho_calca', 'Informe o tamanho da roupa')
+            ->numeric('tamanho_calca', 'Apenas números são permitidos');
+
+        $validator
             ->scalar('tamanho_calcado')
             ->maxLength('tamanho_calcado', 3)
             ->requirePresence('tamanho_calcado', 'create')

@@ -39,8 +39,12 @@
                                     <td><?= h($crianca->idade) ?></td>
                                 </tr>
                                 <tr>
-                                    <th><?= __('Tamanho da roupa') ?></th>
+                                    <th><?= __('Tamanho da camiseta/blusa') ?></th>
                                     <td><?= h($crianca->tamanho_roupa) ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Tamanho da calça/short') ?></th>
+                                    <td><?= h($crianca->tamanho_calca) ?></td>
                                 </tr>
                                 <tr>
                                     <th><?= __('Tamanho do calçado') ?></th>
