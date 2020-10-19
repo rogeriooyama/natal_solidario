@@ -33,7 +33,7 @@
         $("#urlCarta").attr("src",'./' + carta);
       });
     </script>
-    <title>Natal Solidário</title>
+    <title>Natal de Luz</title>
     <?= $this->Html->css(['style']) ?>
   </head>
   <body>
