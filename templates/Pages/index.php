@@ -73,17 +73,24 @@
                   Neste ano desafiador de 2020, nossa tradicional árvore de natal deixou de ser física para ser virtual e nós tivemos que nos reinventar para dar seguimento a este projeto que, muito além de roupas, leva solidariedade e esperança para nossas crianças.
                 </p>
                 <p>
+                  O Lar Santa Filomena inspira crianças a serem crianças, tendo como missão garantir a dignidade de 158 crianças e adolescentes atendidas pelo Serviço de Convivência e Fortalecimento de Vínculo – PROJETO CAE (Conhecimento Além da escola). 
+                </p>
+                <p>
                   Por isso convidamos você a participar e conectar conosco nesse lindo projeto.<br/>
                 </p>
               </div>
               <div class="row text-justify">
                 <p class="subtitle">Como funciona:</p>
                 <p>
-                  Basta selecionar uma bola na árvore, e você poderá ver a cartinha da criança. Clicando em presentear, você poderá ver todas as informações relativas à criança e inserir suas informações para que possamos entrar em contato e combinar com você a melhor forma de fazer isso acontecer.
+                  Para participar, basta escolher uma bola na árvore virtual e ir em "ver cartinha" para conhecer um pouco sobre a criança/ou adolescente que escolheu. Ao final, clique em presentear e terá todas as informações necessárias. Cadastre-se para que possamos entrar em contato e combinar com você a melhor forma de fazer isso acontecer.
                 </p>
                 <p>
-                  A entrega dos presentes arrecadados para as crianças e adolescentes será realizada no dia 18 de dezembro de 2020. <br>
-                  Local de entrega: Lar Santa Filomena, R. Luís Carlos Ferrari, 125 - Jardim Itapura I e II, Pres. Prudente - SP
+                  O projeto Natal de Luz encerra no dia 30/11/2020. <br>
+                  Entrega dos Presentes diretamente no Lar Santa Filomena <br>
+                  (Rua: Luiz Carlos Ferrari, 125 Jardim Itapura I).
+                </p>
+                <p>
+                  Obs: A entrega dos presentes arrecadados para as crianças e adolescentes será realizada no dia 18 de dezembro de 2020.
                 </p>
               </div>
             </div>            
