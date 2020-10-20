@@ -21,6 +21,7 @@ use Cake\Http\Exception\ForbiddenException;
 use Cake\Http\Exception\NotFoundException;
 use Cake\Http\Response;
 use Cake\View\Exception\MissingTemplateException;
+use Cake\Mailer\MailerAwareTrait;
 
 /**
  * Static content controller
@@ -31,6 +32,7 @@ use Cake\View\Exception\MissingTemplateException;
  */
 class PagesController extends AppController
 {
+    use MailerAwareTrait;
 
     public function initialize(): void
     {
@@ -259,12 +261,13 @@ class PagesController extends AppController
             }
             // debug($resposta);exit;
             if ($resposta.success) {
-                $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData());
+                $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData()); 
                 $crianca['status'] = 1;
                 $crianca['email_padrinho'] = strtolower($this->request->getData('email_padrinho'));
                 if ($this->Criancas->save($crianca)) {
                     //$this->Flash->success(__('Obrigado!'));
                     return $this->redirect(['action' => 'confirmacao']);
+                    $this->getMailer('Criancas')->send('infoCrianca', [$crianca]); // Envio de email para recuperação de senha
                 }
                 $this->Flash->error(__('Ocorreu um erro. Tente novamente.'));
             }
