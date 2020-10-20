@@ -57,6 +57,8 @@ class UsersController extends AppController
         $user = $this->Users->newEmptyEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
+            $user->nome = strtolower($user->nome);
+            $user->sobrenome = strtolower($user->sobrenome);
             $user->nome = ucfirst($user->nome);
             $user->sobrenome = ucfirst($user->sobrenome);
             $user->username = strtolower($user->username);
@@ -84,7 +86,9 @@ class UsersController extends AppController
             'contain' => [],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());            
+            $user = $this->Users->patchEntity($user, $this->request->getData());       
+            $user->nome = strtolower($user->nome);
+            $user->sobrenome = strtolower($user->sobrenome);     
             $user->nome = ucfirst($user->nome);
             $user->sobrenome = ucfirst($user->sobrenome);
             $user->username = strtolower($user->username);
