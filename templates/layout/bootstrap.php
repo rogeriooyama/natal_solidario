@@ -52,7 +52,7 @@
         <?= $this->fetch('content') ?>
       </div>
     </main>
-    <footer>
+    <footer class="d-print-none">
       <div class="copyright">
         <div class="row">
           <div class="col-8 offset-2">
