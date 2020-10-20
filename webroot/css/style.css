@@ -126,39 +126,39 @@ main {
 
 .Masculino-0:hover > .pin-text {
     display: block;
-    width: 150px;
+    width: 200px;
 }
 
 .Feminino-0:hover > .pin-text {
     display: block;
-    width: 150px;
+    width: 200px;
 }
 
 .Masculino-1:hover > .pin-text {
     display: block;
-    width: 150px;
+    width: 200px;
 }
 
 .Feminino-1:hover > .pin-text {
     display: block;
-    width: 150px;
+    width: 200px;
 }
 
 .Masculino-2:hover > .pin-text {
     display: block;
-    width: 150px;
+    width: 200px;
 }
 
 .Feminino-2:hover > .pin-text {
     display: block;
-    width: 150px;
+    width: 180px;
 }
 
 .pin-text {
     text-align: center;
     position: absolute;
     top:50%;
-    left:-140%;
+    left:-190%;
     transform:translateY(-120%);
     white-space:nowrap;
     display: none;
@@ -192,12 +192,12 @@ main {
 #pin-1-10 { top:66%; left:50%; }
 #pin-1-11 { top:55%; left:50%; }
 #pin-1-12 { top:50%; left:70%; }
-#pin-1-13 { top:60%; left:85%; }
+#pin-1-13 { top:60%; left:80%; }
 #pin-1-14 { top:60%; left:65%; }
 #pin-1-15 { top:65%; left:5%; }
 #pin-1-16 { top:70%; left:20%; }
 #pin-1-17 { top:73%; left:35%; }
-#pin-1-18 { top:73%; left:85%; }
+#pin-1-18 { top:73%; left:80%; }
 #pin-1-19 { top:75%; left:50%; }
 #pin-1-20 { top:35%; left:20%; }
 
