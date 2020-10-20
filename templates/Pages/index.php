@@ -64,7 +64,7 @@
                 <?= $this->Html->image('flower-bells.png', ['class' => 'ml-auto', 'style' => 'height: 70px; vertical-align: super;']) ?>
               </div>  
             </div>            
-            <div class="mb-3">
+            <div class="mb-5">
               <div class="row text-justify">
                 <p>
                   Seja bem-vindo a 1ª edição do Projeto Natal de Luz. O objetivo da presente campanha é tornar real o sonho de nossas crianças e adolescentes, trazendo consigo a alegria e o espírito de natal e fraternidade.
@@ -91,6 +91,9 @@
                 </p>
                 <p>
                   Obs: A entrega dos presentes arrecadados para as crianças e adolescentes será realizada no dia 18 de dezembro de 2020.
+                </p>
+                <p>
+                  <div class="mr-auto"><small>Lar Santa Filomena: <i class="fas fa-phone-alt"></i> (18) 3223-4786</small></div><div><small><a href="https://larsantafilomena.org.br/" target="_blank"><i class="fas fa-home"></i> Site</a>&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/scblarsantafilomena/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/larsantafilomena/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></small></div>
                 </p>
               </div>
             </div>            
