@@ -63,10 +63,14 @@
                                                 break;
                                             
                                             case '1':
-                                                echo '<span class="badge badge-warning">Aguardando contato</span>';
+                                                echo '<span class="badge badge-info">Aguardando contato</span>';
+                                                break;
+                                            
+                                            case '2':
+                                                echo '<span class="badge badge-warning">Aguardando presente</span>';
                                                 break;
 
-                                            case '2':
+                                            case '3':
                                                 echo '<span class="badge badge-success">Confirmado</span>';
                                                 break;
                                         }

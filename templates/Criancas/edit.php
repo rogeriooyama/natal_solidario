@@ -43,6 +43,12 @@
                                 echo $this->Form->control('tamanho_calca', ['label' => 'Tamanho da calça/short', 'class' => 'form-control mb-2']);
                                 echo $this->Form->control('tamanho_calcado', ['label' => 'Tamanho do calçado', 'class' => 'form-control mb-2']);
                                 echo $this->Form->control('observacoes', ['label' => 'Observações', 'class' => 'form-control mb-2']);
+                                echo $this->Form->control('status', [
+                                    'label' => 'Status', 
+                                    'type' => 'select',
+                                    'options' => [''=>'', '0' => 'Disponível', '1' => 'Aguardando contato', '2' => 'Aguardando presente', '3' => 'Confirmado'],
+                                    'class' => 'form-control mb-2'
+                                    ]);
                             ?>
                         </div>
                     </div>
