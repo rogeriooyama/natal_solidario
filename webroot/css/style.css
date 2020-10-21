@@ -124,6 +124,26 @@ main {
     position: absolute;
 }
 
+.Masculino-3 {
+    width:10%;
+    height:10%;
+    background-image: url(../img/little_boy-2-50px.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+}
+
+.Feminino-3 {
+    width:10%;
+    height:10%;
+    background-image:   url(../img/baby_girl-2-50px.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+}
+
 .Masculino-0:hover > .pin-text {
     display: block;
     width: 200px;
@@ -150,6 +170,16 @@ main {
 }
 
 .Feminino-2:hover > .pin-text {
+    display: block;
+    width: 180px;
+}
+
+.Masculino-3:hover > .pin-text {
+    display: block;
+    width: 200px;
+}
+
+.Feminino-3:hover > .pin-text {
     display: block;
     width: 180px;
 }
