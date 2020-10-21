@@ -71,7 +71,7 @@
                                                 break;
 
                                             case '3':
-                                                echo '<span class="badge badge-success">Confirmado</span>';
+                                                echo '<span class="badge badge-success">Presenteado</span>';
                                                 break;
                                         }
                                         $crianca->status 

@@ -263,7 +263,7 @@ class PagesController extends AppController
             if ($resposta.success) {
                 $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData()); 
                 $crianca['status'] = 1;
-                $crianca['email_padrinho'] = strtolower($this->request->getData('email_padrinho'));
+                $crianca['email_padrinho'] = mb_strtolower($this->request->getData('email_padrinho'));
                 if ($this->Criancas->save($crianca)) {
                     //$this->Flash->success(__('Obrigado!'));
                     return $this->redirect(['action' => 'confirmacao']);

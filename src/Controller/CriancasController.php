@@ -58,8 +58,8 @@ class CriancasController extends AppController
         $crianca = $this->Criancas->newEmptyEntity();
         if ($this->request->is('post')) {
             $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData());
-            $crianca->nome = strtolower($crianca->nome);
-            $crianca->sobrenome = strtolower($crianca->sobrenome);
+            $crianca->nome = mb_strtolower($crianca->nome);
+            $crianca->sobrenome = mb_strtolower($crianca->sobrenome);
             $crianca->nome = ucfirst($crianca->nome);
             $crianca->sobrenome = ucfirst($crianca->sobrenome);
             $file = $this->request->getData("carta");
@@ -101,8 +101,8 @@ class CriancasController extends AppController
         $crianca = $this->Criancas->get($id);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData());
-            $crianca->nome = strtolower($crianca->nome);
-            $crianca->sobrenome = strtolower($crianca->sobrenome);
+            $crianca->nome = mb_strtolower($crianca->nome);
+            $crianca->sobrenome = mb_strtolower($crianca->sobrenome);
             $crianca->nome = ucfirst($crianca->nome);
             $crianca->sobrenome = ucfirst($crianca->sobrenome);
             if ($this->Criancas->save($crianca)) {

@@ -90,7 +90,7 @@
                                                     break;
 
                                                 case '2':
-                                                    echo 'Confirmado';
+                                                    echo 'Presenteado';
                                                     break;
                                             }
                                             $crianca->status 

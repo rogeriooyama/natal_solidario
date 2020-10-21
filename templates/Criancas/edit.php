@@ -46,7 +46,7 @@
                                 echo $this->Form->control('status', [
                                     'label' => 'Status', 
                                     'type' => 'select',
-                                    'options' => [''=>'', '0' => 'Disponível', '1' => 'Aguardando contato', '2' => 'Aguardando presente', '3' => 'Confirmado'],
+                                    'options' => [''=>'', '0' => 'Disponível', '1' => 'Aguardando contato', '2' => 'Aguardando presente', '3' => 'Presenteado'],
                                     'class' => 'form-control mb-2'
                                     ]);
                             ?>
