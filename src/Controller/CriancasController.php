@@ -57,11 +57,9 @@ class CriancasController extends AppController
     {
         $crianca = $this->Criancas->newEmptyEntity();
         if ($this->request->is('post')) {
-            $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData());
-            $crianca->nome = mb_strtolower($crianca->nome);
-            $crianca->sobrenome = mb_strtolower($crianca->sobrenome);
-            $crianca->nome = ucfirst($crianca->nome);
-            $crianca->sobrenome = ucfirst($crianca->sobrenome);
+            $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData());            
+            $crianca->nome = ucwords(mb_strtolower($crianca->nome));
+            $crianca->sobrenome = ucwords(mb_strtolower($crianca->sobrenome));
             $file = $this->request->getData("carta");
 
             $valid_extensions = array("image/png", "image/jpeg", "image/jpg");
@@ -101,10 +99,8 @@ class CriancasController extends AppController
         $crianca = $this->Criancas->get($id);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $crianca = $this->Criancas->patchEntity($crianca, $this->request->getData());
-            $crianca->nome = mb_strtolower($crianca->nome);
-            $crianca->sobrenome = mb_strtolower($crianca->sobrenome);
-            $crianca->nome = ucfirst($crianca->nome);
-            $crianca->sobrenome = ucfirst($crianca->sobrenome);
+            $crianca->nome = ucwords(mb_strtolower($crianca->nome));
+            $crianca->sobrenome = ucwords(mb_strtolower($crianca->sobrenome));
             if ($this->Criancas->save($crianca)) {
                 $this->Flash->success(__('A criança foi alterada.'));
                 return $this->redirect(['action' => 'index']);
