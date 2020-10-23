@@ -257,7 +257,8 @@ class PagesController extends AppController
                 return $this->redirect(['action' => 'adotar', $id]);
             }
             else {
-                $resposta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe&response=".$captcha_data."&remoteip=".$_SERVER['REMOTE_ADDR']);
+                // $resposta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe&response=".$captcha_data."&remoteip=".$_SERVER['REMOTE_ADDR']);
+                $resposta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdU69IZAAAAAAjIyvHiucXYDpD_llhPv_54RS7Y&response=".$captcha_data."&remoteip=".$_SERVER['REMOTE_ADDR']);
             }
             // debug($resposta);exit;
             if ($resposta.success) {
