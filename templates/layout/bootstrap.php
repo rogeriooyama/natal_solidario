@@ -39,7 +39,7 @@
   <body>
     <nav class="navbar">
       <div>        
-        <a href="<?= $this->Url->build(['controller' => 'pages', 'action' => 'index']) ?>" data-toggle="tooltip" data-placement="bottom" title="Página Inicial"><?= $this->Html->image('logo-lar-sta-filomena-branco-chapeu.png') ?></a>
+      <a href="https://larsantafilomena.org.br" data-toggle="tooltip" data-placement="bottom" title="Site Lar Santa Filomena"><?= $this->Html->image('logo-lar-sta-filomena-branco-chapeu.png') ?></a>
       </div>
       <div>
         <a class="navbar-toggler btn btn-outline-danger" href="<?= $this->Url->build(['controller' => 'users', 'action' => 'login']) ?>" data-toggle="tooltip" data-placement="left" title="Área Administrativa">
