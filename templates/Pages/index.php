@@ -103,7 +103,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="criancaModal" tabindex="-1" aria-labelledby="criancaModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header modal-danger">
         <h5 class="modal-title" id="criancaModalLabel"></h5>
