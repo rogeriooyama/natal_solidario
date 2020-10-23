@@ -19,7 +19,6 @@ class CriancasMailer extends Mailer
 
     public function infoCrianca($crianca)
     {
-        
         $this
             ->setTo($crianca->email_padrinho)
             ->setProfile('email_profile')
@@ -39,4 +38,5 @@ class CriancasMailer extends Mailer
                 ->setLayout('default')
                 ->setTemplate('tpl_info_crianca');
     }
+    
 }
