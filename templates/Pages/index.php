@@ -67,7 +67,7 @@
             <div class="mb-5">
               <div class="row text-justify">
                 <p>
-                  Seja bem-vindo a 1ª edição do Projeto Natal de Luz. O objetivo da presente campanha é tornar real o sonho de nossas crianças e adolescentes, trazendo consigo a alegria e o espírito de natal e fraternidade.
+                  Sejam bem vindos à 13ª edição do projeto Natal de Luz, a 1ª edição digital. O objetivo da presente campanha é tornar real o sonho de nossas crianças e adolescentes, trazendo consigo a alegria e o espírito de natal e fraternidade.
                 </p>
                 <p>
                   Neste ano desafiador de 2020, nossa tradicional árvore de natal deixou de ser física para ser virtual e nós tivemos que nos reinventar para dar seguimento a este projeto que, muito além de roupas, leva solidariedade e esperança para nossas crianças.
